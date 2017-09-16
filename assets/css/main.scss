@@ -1,0 +1,11 @@
+@import "normalize";
+
+$medium-breakpoint: 690px;
+$large-breakpoint: 1020px;
+
+// Responsive Media Queries
+$responsive-small: "only screen and (max-width: #{$medium-breakpoint - 1})";
+$responsive-small-medium: "only screen and (max-width: #{$large-breakpoint - 1})";
+$responsive-medium: "only screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint - 1})";
+$responsive-medium-large: "only screen and (min-width: #{$medium-breakpoint})";
+$responsive-large: "only screen and (min-width: #{$large-breakpoint})";
