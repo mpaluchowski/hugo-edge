@@ -1,0 +1,12 @@
+name = "Triathlete"
+license = "MIT"
+licenselink = "https://github.com/mpaluchowski/hugo-triathlete/blob/master/LICENSE.md"
+description = "Theme for my personal triathlon-themed blog."
+homepage = "https://triathlete.paluchowski.com/"
+tags = ["blog", "responsive"]
+features = []
+min_version = "0.27.1"
+
+[author]
+    name = "Michał Paluchowski"
+    homepage = "https://triathlete.paluchowski.com/"
