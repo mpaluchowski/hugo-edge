@@ -26,3 +26,13 @@
     </head>
 
     <body>
+        <header>
+            {{ if .IsHome }}<h1{{ else }}<div{{ end }}><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>{{ if .IsHome }}</h1{{ else }}</div{{ end }}>
+            {{ with .Site.Params.Subtitle }}<div>{{ . }}</div>{{ end }}
+
+            <nav>
+                {{ range ( where .Site.Pages "Kind" "section" ).ByWeight -}}
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{- end }}
+            </nav>
+        </header>
