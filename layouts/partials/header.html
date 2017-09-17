@@ -31,8 +31,8 @@
             {{ with .Site.Params.Subtitle }}<div>{{ . }}</div>{{ end }}
 
             <nav>
-                {{ range ( where .Site.Pages "Kind" "section" ).ByWeight -}}
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ range .Site.Menus.main -}}
+                <a href="{{ .URL }}">{{ .Name }}</a>
                 {{- end }}
             </nav>
         </header>
