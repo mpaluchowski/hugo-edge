@@ -128,10 +128,17 @@ html {
     width: 100%;
 
     &__content {
-        display: flex;
         flex: 1 1 $width-content-relative;
-        flex-flow: row wrap;
         max-width: $width-content-relative;
+
+        &--columns {
+            display: flex;
+            flex-flow: row wrap;
+
+            > * {
+                flex: 1 1 50%;
+            }
+        }
     }
 
     &__sideline {
@@ -139,27 +146,7 @@ html {
     }
 }
 
-.article-grid {
-    padding: 1em 0;
-
-    &__article {
-        box-sizing: border-box;
-        flex: 1 0 50%;
-        padding: 1em;
-
-        &:first-child {
-            flex: 1 0 100%;
-        }
-
-        &:nth-child(n + 2) {
-            font-size: .9em;
-        }
-    }
-
-    &__header {
-
-    }
-
+.articles {
     &__image {
         background: {
             position: 50% 50%;
@@ -189,6 +176,33 @@ html {
             &:hover {
                 border-bottom: 2px solid $color-highlight-dark;
             }
+        }
+    }
+}
+
+.article-grid {
+    padding: 1em 0;
+
+    &__article {
+        box-sizing: border-box;
+        padding: 1em;
+
+        &:first-child {
+            flex: 1 0 100%;
+        }
+
+        &:nth-child(n + 2) {
+            font-size: .9em;
+        }
+    }
+}
+
+.article-list {
+    padding-left: 10rem;
+
+    &__article {
+        & + & {
+            margin-top: 2em;
         }
     }
 }

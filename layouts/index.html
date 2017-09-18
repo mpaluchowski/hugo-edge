@@ -1,36 +1,36 @@
 {{ partial "header.html" . }}
 
 <div class="grid-screen__main grid-page">
-    <main class="grid-page__content article-grid">
+    <main class="grid-page__content grid-page__content--columns articles article-grid">
         {{ range first 5 (where .Site.Pages "Kind" "page") }}
-        <article class="article-grid__article">
-            <header class="article-grid__header">
-                {{ with .Params.image }}<div class="article-grid__image" style="background-image: url({{ . }});"></div>{{ end }}
-                <time class="article-grid__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
-                <h2 class="article-grid__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <article class="articles__article article-grid__article">
+            <header class="articles__header">
+                {{ with .Params.image }}<div class="articles__image" style="background-image: url({{ . }});"></div>{{ end }}
+                <time class="articles__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                <h2 class="articles__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             </header>
             <div class="text">{{ .Summary }}</div>
         </article>
         {{ end }}
-        <article class="article-grid__article">
+        <article class="articles__article article-grid__article">
             <header>
-                <time class="article-grid__time" datetime="{{ now.Format "2006-01-02T15:04Z07:00" }}">{{ now.Format "January 2, 2006" }}</time>
-                <h2 class="article-grid__title"><a href="#">Some Other Race Recap</a></h2>
+                <time class="articles__time" datetime="{{ now.Format "2006-01-02T15:04Z07:00" }}">{{ now.Format "January 2, 2006" }}</time>
+                <h2 class="articles__title"><a href="#">Some Other Race Recap</a></h2>
             </header>
             <div class="text"><p>Ut euismod sollicitudin commodo. Maecenas fermentum nunc id orci viverra, sed suscipit enim vehicula. Fusce in dapibus eros, sed ultricies libero. Sed efficitur risus vitae lectus condimentum, at pellentesque est suscipit.</p></div>
         </article>
-        <article class="article-grid__article">
+        <article class="articles__article article-grid__article">
             <header>
-                <div class="article-grid__image" style="background-image: url(http://lorempixel.com/400/100/);"></div>
-                <time class="article-grid__time" datetime="{{ now.Format "2006-01-02T15:04Z07:00" }}">{{ now.Format "January 2, 2006" }}</time>
-                <h2 class="article-grid__title"><a href="#">New Gear Review</a></h2>
+                <div class="articles__image" style="background-image: url(http://lorempixel.com/400/100/);"></div>
+                <time class="articles__time" datetime="{{ now.Format "2006-01-02T15:04Z07:00" }}">{{ now.Format "January 2, 2006" }}</time>
+                <h2 class="articles__title"><a href="#">New Gear Review</a></h2>
             </header>
             <div class="text"><p>Sed efficitur risus vitae lectus condimentum, at pellentesque est suscipit. Mauris elit felis, sagittis id magna vitae, tempor sollicitudin nulla. Integer convallis ligula posuere nulla lobortis, at venenatis orci imperdiet.</p></div>
         </article>
-        <article class="article-grid__article">
+        <article class="articles__article article-grid__article">
             <header>
-                <time class="article-grid__time" datetime="{{ now.Format "2006-01-02T15:04Z07:00" }}">{{ now.Format "January 2, 2006" }}</time>
-                <h2 class="article-grid__title"><a href="#">Some Other Race Recap</a></h2>
+                <time class="articles__time" datetime="{{ now.Format "2006-01-02T15:04Z07:00" }}">{{ now.Format "January 2, 2006" }}</time>
+                <h2 class="articles__title"><a href="#">Some Other Race Recap</a></h2>
             </header>
             <div class="text"><p>Ut euismod sollicitudin commodo. Maecenas fermentum nunc id orci viverra, sed suscipit enim vehicula. Fusce in dapibus eros, sed ultricies libero. Sed efficitur risus vitae lectus condimentum, at pellentesque est suscipit.</p></div>
         </article>
@@ -45,7 +45,7 @@
 
 <div class="highlights">
     <div class="grid-page">
-        <div class="grid-page__content">
+        <div class="grid-page__content grid-page__content--columns">
             <nav class="highlights__entry">
                 <h3 class="highlights__header">Upcoming Races</h3>
                 <ul class="races">

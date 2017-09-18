@@ -9,10 +9,28 @@
                 <h1 class="article__title">{{ .Title }}</h1>
             </header>
 
+            {{ if .Content }}
             <section class="article__text text">
                 {{ .Content }}
             </section>
+            {{ end }}
         </article>
+
+        {{ $children := (.Pages | union .Sections).ByDate.Reverse }}
+        {{ if $children }}
+        <div class="articles article-list">
+            {{ range $children }}
+            <article class="articles__article article-list__article">
+                <header class="articles__header">
+                    {{ with .Params.image }}<div class="articles__image" style="background-image: url({{ . }});"></div>{{ end }}
+                    <time class="articles__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                    <h2 class="articles__title">{{ if or .Pages .Content }}<a href="{{ .Permalink }}">{{ end }}{{ .Title }}{{ if or .Pages .Content }}</a>{{ end }}</h2>
+                </header>
+                <div class="text">{{ .Summary }}</div>
+            </article>
+            {{ end }}
+        </div>
+        {{ end }}
     </main>
 </div>
 
