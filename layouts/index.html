@@ -14,10 +14,12 @@
         {{ end }}
     </main>
     <aside class="grid-page__sideline">
+        {{ with .Site.Params.Intro }}
         <div class="page-intro text">
-            <h2>Hi, I'm Michał!</h2>
-            <p>I'm a mediocre age grouper, trying hard to improve, sharing findings, concerns and questions as I go. Mauris elit felis, sagittis id magna vitae, tempor sollicitudin nulla. Integer convallis ligula posuere nulla lobortis, at venenatis orci imperdiet. <a href="/about/">Read more</a>.</p>
+            <h2>Hi, I'm {{ .name | plainify }}!</h2>
+            <p>{{ .text | safeHTML }} <a href="/about/">Read more</a>.</p>
         </div>
+        {{ end }}
     </aside>
 </div>
 
