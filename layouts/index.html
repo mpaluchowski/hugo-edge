@@ -1,25 +1,28 @@
 {{ partial "header.html" . }}
 
-<main>
+<main class="article-grid">
     {{ range first 4 (where .Site.Pages "Kind" "page") }}
-    <article>
-        <header>
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <article class="article-grid__article">
+        <header class="article-grid__header">
+            <div class="article-grid__image" style="background-image: url(http://lorempixel.com/400/100/);"></div>
+            <h2 class="article-grid__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         </header>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae sollicitudin ante. Suspendisse dui purus, dapibus ut cursus at, scelerisque in orci. Integer malesuada elit in risus lobortis luctus.</p>
+        <div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae sollicitudin ante. Suspendisse dui purus, dapibus ut cursus at, scelerisque in orci. Integer malesuada elit in risus lobortis luctus.</p></div>
     </article>
     {{ end }}
-    <article>
+    <article class="article-grid__article">
         <header>
-            <h2><a href="#">Some Other Race Recap</a></h2>
+
+            <h2 class="article-grid__title"><a href="#">Some Other Race Recap</a></h2>
         </header>
-        <p>Ut euismod sollicitudin commodo. Maecenas fermentum nunc id orci viverra, sed suscipit enim vehicula. Fusce in dapibus eros, sed ultricies libero. Sed efficitur risus vitae lectus condimentum, at pellentesque est suscipit.</p>
+        <div class="text"><p>Ut euismod sollicitudin commodo. Maecenas fermentum nunc id orci viverra, sed suscipit enim vehicula. Fusce in dapibus eros, sed ultricies libero. Sed efficitur risus vitae lectus condimentum, at pellentesque est suscipit.</p></div>
     </article>
-    <article>
+    <article class="article-grid__article">
         <header>
-            <h2><a href="#">New Gear Review</a></h2>
+            <div class="article-grid__image" style="background-image: url(http://lorempixel.com/400/100/);"></div>
+            <h2 class="article-grid__title"><a href="#">New Gear Review</a></h2>
         </header>
-        <p>Sed efficitur risus vitae lectus condimentum, at pellentesque est suscipit. Mauris elit felis, sagittis id magna vitae, tempor sollicitudin nulla. Integer convallis ligula posuere nulla lobortis, at venenatis orci imperdiet.</p>
+        <div class="text"><p>Sed efficitur risus vitae lectus condimentum, at pellentesque est suscipit. Mauris elit felis, sagittis id magna vitae, tempor sollicitudin nulla. Integer convallis ligula posuere nulla lobortis, at venenatis orci imperdiet.</p></div>
     </article>
 </main>
 
