@@ -10,6 +10,9 @@ $responsive-medium: "only screen and (min-width: #{$medium-breakpoint}) and (max
 $responsive-medium-large: "only screen and (min-width: #{$medium-breakpoint})";
 $responsive-large: "only screen and (min-width: #{$large-breakpoint})";
 
+// Common Content Sizing
+$line-height: 1.428;
+
 // Fonts
 $font-default: "Khula", Helvetica, Arial, sans-serif;
 $font-header: "Julius Sans One", Helvetica, Arial, sans-serif;
@@ -55,6 +58,17 @@ html {
     }
 }
 
+.footer {
+    background: $color-background;
+    color: #FFF;
+    padding: 1em;
+
+    &__copyright {
+        font-size: .8em;
+        margin-top: 3em;
+    }
+}
+
 .nav-sections {
     &__link {
         color: #FFF;
@@ -84,5 +98,17 @@ html {
             transform: rotateZ(30deg);
             vertical-align: middle;
         }
+    }
+}
+
+.text {
+    p {
+        line-height: $line-height;
+    }
+
+    a {
+        border-bottom: 1px solid $color-highlight;
+        color: inherit;
+        text-decoration: none;
     }
 }

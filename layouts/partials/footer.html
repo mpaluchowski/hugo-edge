@@ -1,14 +1,14 @@
-        <footer>
-            <nav>
+        <footer class="footer">
+            <nav class="nav-sections">
                 {{ range .Site.Menus.main -}}
-                <a href="{{ .URL }}">{{ .Name }}</a>
+                <a href="{{ .URL }}" class="nav-sections__link">{{ .Name }}</a>
                 {{- end }}
-                <a href="/community">Community</a>
-                <a href="/gear">Gear</a>
-                <a href="/resources">Resources</a>
+                <a href="/community" class="nav-sections__link">Community</a>
+                <a href="/gear" class="nav-sections__link">Gear</a>
+                <a href="/resources" class="nav-sections__link">Resources</a>
             </nav>
 
-            <p>Published by <a href="https://michal.paluchowski.com/">Michał Paluchowski</a>. All content is under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+            <div class="footer__copyright text"><p>Published by <a href="https://michal.paluchowski.com/">Michał Paluchowski</a>. All content is under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p></div>
         </footer>
     </body>
 </html>
