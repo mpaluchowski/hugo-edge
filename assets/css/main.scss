@@ -403,6 +403,7 @@ html {
         text-decoration: none;
 
         &:hover {
+            background: $color-highlight;
             border-color: #000;
         }
     }
@@ -417,7 +418,7 @@ html {
             border-bottom-color: $color-highlight;
 
             &:hover {
-                color: $color-highlight;
+                color: #000;
             }
         }
     }
