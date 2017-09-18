@@ -8,7 +8,7 @@
                 {{ with .Params.image }}<div class="article-grid__image" style="background-image: url({{ . }});"></div>{{ end }}
                 <h2 class="article-grid__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             </header>
-            <div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae sollicitudin ante. Suspendisse dui purus, dapibus ut cursus at, scelerisque in orci. Integer malesuada elit in risus lobortis luctus.</p></div>
+            <div class="text">{{ .Summary }}</div>
         </article>
         {{ end }}
         <article class="article-grid__article">
