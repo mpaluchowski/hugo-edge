@@ -301,6 +301,12 @@ html {
     &__text {
         margin-left: 10rem;
     }
+
+    &--section {
+        .article__header {
+            margin-top: 3rem;
+        }
+    }
 }
 
 .stats {
