@@ -1,2 +1,14 @@
+        <footer>
+            <nav>
+                {{ range .Site.Menus.main -}}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+                {{- end }}
+                <a href="/community">Community</a>
+                <a href="/gear">Gear</a>
+                <a href="/resources">Resources</a>
+            </nav>
+
+            <p>Published by <a href="https://michal.paluchowski.com/">Michał Paluchowski</a>. All content is under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+        </footer>
     </body>
 </html>
