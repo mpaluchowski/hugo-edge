@@ -11,4 +11,15 @@
     {{ end }}
 </main>
 
+<div>
+    <nav>
+        <h3>Upcoming Races</h3>
+        <ul>
+            {{ range (.Site.GetPage "section" "races").Sections.ByDate }}
+            <li>{{ .Date.Format "Jan 2" }} {{ if .Pages }}<a href="{{ .URL }}">{{ end }}{{ .Title }}{{ if .Pages }}</a>{{ end }}</li>
+            {{ end }}
+        </ul>
+    </nav>
+</div>
+
 {{ partial "footer.html" . }}
