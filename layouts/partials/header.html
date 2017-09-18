@@ -31,12 +31,12 @@
             {{ if .IsHome }}<h1{{ else }}<div{{ end }} class="header__title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>{{ if .IsHome }}</h1{{ else }}</div{{ end }}>
             {{ with .Site.Params.Subtitle }}<div class="header__subtitle">{{ . }}</div>{{ end }}
 
-            <nav class="header__navigation">
+            <nav class="header__navigation nav-sections">
                 {{ range .Site.Menus.main -}}
-                <a href="{{ .URL }}">{{ .Name }}</a>
+                <a href="{{ .URL }}" class="nav-sections__link">{{ .Name }}</a>
                 {{- end }}
-                <a href="/community">Community</a>
-                <a href="/gear">Gear</a>
-                <a href="/resources">Resources</a>
+                <a href="/community" class="nav-sections__link">Community</a>
+                <a href="/gear" class="nav-sections__link">Gear</a>
+                <a href="/resources" class="nav-sections__link">Resources</a>
             </nav>
         </header>
