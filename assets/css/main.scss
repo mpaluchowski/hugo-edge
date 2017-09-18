@@ -101,6 +101,17 @@ html {
     }
 }
 
+.highlights {
+    background: darken($color-highlight, 5%);
+    display: flex;
+
+    &__entry {
+        flex: 1 0 33%;
+        padding: 1em;
+        box-sizing: border-box;
+    }
+}
+
 .text {
     p {
         line-height: $line-height;
