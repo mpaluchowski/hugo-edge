@@ -112,6 +112,16 @@ html {
     }
 }
 
+.grid-screen {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    &__main {
+        flex: 1;
+    }
+}
+
 .grid-page {
     display: flex;
     max-width: $width-total;

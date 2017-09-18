@@ -26,7 +26,7 @@
         {{ template "_internal/google_analytics_async.html" . }}
     </head>
 
-    <body>
+    <body class="grid-screen">
         <header class="header">
             {{ if .IsHome }}<h1{{ else }}<div{{ end }} class="header__title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>{{ if .IsHome }}</h1{{ else }}</div{{ end }}>
             {{ with .Site.Params.Subtitle }}<div class="header__subtitle">{{ . }}</div>{{ end }}
