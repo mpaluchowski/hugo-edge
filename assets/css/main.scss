@@ -139,12 +139,20 @@ html {
     }
 
     &__image {
-        margin-bottom: .8em;
         background: {
             position: 50% 50%;
             size: cover;
         }
         height: 100px;
+        margin-bottom: 1.4em;
+    }
+
+    &__time {
+        display: block;
+        font: {
+            family: $font-header;
+            size: .9em;
+        }
     }
 
     &__title {
