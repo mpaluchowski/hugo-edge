@@ -9,3 +9,12 @@ $responsive-small-medium: "only screen and (max-width: #{$large-breakpoint - 1})
 $responsive-medium: "only screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint - 1})";
 $responsive-medium-large: "only screen and (min-width: #{$medium-breakpoint})";
 $responsive-large: "only screen and (min-width: #{$large-breakpoint})";
+
+// Fonts
+$font-default: "Khula", Helvetica, Arial, sans-serif;
+
+html {
+    font: {
+        family: $font-default;
+    }
+}
