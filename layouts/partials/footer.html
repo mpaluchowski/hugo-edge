@@ -1,7 +1,8 @@
         <footer class="footer">
             <nav class="nav-sections">
+                {{ $currentPage := . }}
                 {{ range .Site.Menus.main -}}
-                <a href="{{ .URL }}" class="nav-sections__link">{{ .Name }}</a>
+                <a href="{{ .URL }}" class="nav-sections__link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} nav-sections__link--current{{ end }}">{{ .Name }}</a>
                 {{- end }}
                 <a href="/community" class="nav-sections__link">Community</a>
                 <a href="/gear" class="nav-sections__link">Gear</a>

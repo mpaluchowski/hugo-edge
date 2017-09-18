@@ -82,6 +82,10 @@ html {
         display: inline-block;
         text-decoration: none;
 
+        &--current {
+            color: $color-highlight;
+        }
+
         &:hover {
             color: $color-highlight;
         }
