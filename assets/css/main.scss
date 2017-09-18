@@ -45,7 +45,7 @@ html {
             weight: 400;
             family: $font-header;
         }
-        margin: 0;
+        margin: 0 1em 0 0;
 
         a {
             color: $color-highlight;
@@ -57,7 +57,6 @@ html {
         color: #FFF;
         display: inline-block;
         font-size: 1.4rem;
-        margin-left: 1em;
     }
 
     &__navigation {
@@ -127,16 +126,24 @@ html {
     max-width: $width-total;
     width: 100%;
 
+    @media #{$responsive-small} {
+        flex-direction: column;
+    }
+
     &__content {
         flex: 1 1 $width-content-relative;
-        max-width: $width-content-relative;
 
-        &--columns {
-            display: flex;
-            flex-flow: row wrap;
+        @media #{$responsive-medium-large} {
+            max-width: $width-content-relative;
 
-            > * {
-                flex: 0 1 50%;
+            &--columns {
+                display: flex;
+                flex-flow: row wrap;
+                align-content: flex-start;
+
+                > * {
+                    flex: 0 1 50%;
+                }
             }
         }
     }
@@ -208,8 +215,14 @@ html {
 }
 
 .page-intro {
-    padding: 1em;
-    max-width: 20em;
+    @media #{$responsive-small} {
+        padding: 0 1em 1em;
+    }
+
+    @media #{$responsive-medium-large} {
+        max-width: 20em;
+        padding: 1em;
+    }
 }
 
 .highlights {

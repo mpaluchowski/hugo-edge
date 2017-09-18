@@ -16,7 +16,7 @@
     <aside class="grid-page__sideline">
         {{ with .Site.Params.Intro }}
         <div class="page-intro text">
-            <h2>Hi, I'm {{ .name | plainify }}!</h2>
+            <h2 class="page-intro__header">Hi, I'm {{ .name | plainify }}!</h2>
             <p>{{ .text | safeHTML }} <a href="/about/">Read more</a>.</p>
         </div>
         {{ end }}
