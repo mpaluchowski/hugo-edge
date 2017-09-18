@@ -4,9 +4,6 @@
                 {{ range .Site.Menus.main -}}
                 <a href="{{ .URL }}" class="nav-sections__link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} nav-sections__link--current{{ end }}">{{ .Name }}</a>
                 {{- end }}
-                <a href="/community" class="nav-sections__link">Community</a>
-                <a href="/gear" class="nav-sections__link">Gear</a>
-                <a href="/resources" class="nav-sections__link">Resources</a>
             </nav>
 
             <div class="footer__copyright text text--dark"><p>Published by <a href="https://michal.paluchowski.com/">Michał Paluchowski</a>. All content is under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p></div>
