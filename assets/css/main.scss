@@ -12,9 +12,45 @@ $responsive-large: "only screen and (min-width: #{$large-breakpoint})";
 
 // Fonts
 $font-default: "Khula", Helvetica, Arial, sans-serif;
+$font-header: "Julius Sans One", Helvetica, Arial, sans-serif;
+
+// Colors
+$color-background: #000;
+$color-highlight: #FF0;
 
 html {
     font: {
         family: $font-default;
+    }
+}
+
+.header {
+    background: $color-background;
+    padding: 1em;
+
+    &__title {
+        display: inline-block;
+        font: {
+            size: 2rem;
+            weight: 400;
+            family: $font-header;
+        }
+        margin: 0;
+
+        a {
+            color: $color-highlight;
+            text-decoration: none;
+        }
+    }
+
+    &__subtitle {
+        color: #FFF;
+        display: inline-block;
+        font-size: 1.4rem;
+        margin-left: 1em;
+    }
+
+    &__navigation {
+        margin-top: 1em;
     }
 }

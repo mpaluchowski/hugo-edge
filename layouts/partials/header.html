@@ -27,11 +27,11 @@
     </head>
 
     <body>
-        <header>
-            {{ if .IsHome }}<h1{{ else }}<div{{ end }}><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>{{ if .IsHome }}</h1{{ else }}</div{{ end }}>
-            {{ with .Site.Params.Subtitle }}<div>{{ . }}</div>{{ end }}
+        <header class="header">
+            {{ if .IsHome }}<h1{{ else }}<div{{ end }} class="header__title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>{{ if .IsHome }}</h1{{ else }}</div{{ end }}>
+            {{ with .Site.Params.Subtitle }}<div class="header__subtitle">{{ . }}</div>{{ end }}
 
-            <nav>
+            <nav class="header__navigation">
                 {{ range .Site.Menus.main -}}
                 <a href="{{ .URL }}">{{ .Name }}</a>
                 {{- end }}
