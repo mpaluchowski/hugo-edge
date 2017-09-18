@@ -106,10 +106,24 @@ html {
     }
 }
 
-.article-grid {
+.grid-page {
     display: flex;
-    flex-flow: row wrap;
-    max-width: $width-content-absolute;
+    max-width: $width-total;
+    width: 100%;
+
+    &__content {
+        display: flex;
+        flex: 1 1 $width-content-relative;
+        flex-flow: row wrap;
+        max-width: $width-content-relative;
+    }
+
+    &__sideline {
+        flex: 1 1 $width-side-relative;
+    }
+}
+
+.article-grid {
     padding: 1em 0;
 
     &__article {
@@ -144,6 +158,10 @@ html {
             }
         }
     }
+}
+
+.page-intro {
+    padding: 1em;
 }
 
 .highlights {

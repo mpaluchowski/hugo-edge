@@ -1,48 +1,62 @@
 {{ partial "header.html" . }}
 
-<main class="article-grid">
-    {{ range first 4 (where .Site.Pages "Kind" "page") }}
-    <article class="article-grid__article">
-        <header class="article-grid__header">
-            <div class="article-grid__image" style="background-image: url(http://lorempixel.com/400/100/);"></div>
-            <h2 class="article-grid__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        </header>
-        <div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae sollicitudin ante. Suspendisse dui purus, dapibus ut cursus at, scelerisque in orci. Integer malesuada elit in risus lobortis luctus.</p></div>
-    </article>
-    {{ end }}
-    <article class="article-grid__article">
-        <header>
+<div class="grid-page">
+    <main class="grid-page__content article-grid">
+        {{ range first 4 (where .Site.Pages "Kind" "page") }}
+        <article class="article-grid__article">
+            <header class="article-grid__header">
+                <div class="article-grid__image" style="background-image: url(http://lorempixel.com/400/100/);"></div>
+                <h2 class="article-grid__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            </header>
+            <div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae sollicitudin ante. Suspendisse dui purus, dapibus ut cursus at, scelerisque in orci. Integer malesuada elit in risus lobortis luctus.</p></div>
+        </article>
+        {{ end }}
+        <article class="article-grid__article">
+            <header>
 
-            <h2 class="article-grid__title"><a href="#">Some Other Race Recap</a></h2>
-        </header>
-        <div class="text"><p>Ut euismod sollicitudin commodo. Maecenas fermentum nunc id orci viverra, sed suscipit enim vehicula. Fusce in dapibus eros, sed ultricies libero. Sed efficitur risus vitae lectus condimentum, at pellentesque est suscipit.</p></div>
-    </article>
-    <article class="article-grid__article">
-        <header>
-            <div class="article-grid__image" style="background-image: url(http://lorempixel.com/400/100/);"></div>
-            <h2 class="article-grid__title"><a href="#">New Gear Review</a></h2>
-        </header>
-        <div class="text"><p>Sed efficitur risus vitae lectus condimentum, at pellentesque est suscipit. Mauris elit felis, sagittis id magna vitae, tempor sollicitudin nulla. Integer convallis ligula posuere nulla lobortis, at venenatis orci imperdiet.</p></div>
-    </article>
-</main>
+                <h2 class="article-grid__title"><a href="#">Some Other Race Recap</a></h2>
+            </header>
+            <div class="text"><p>Ut euismod sollicitudin commodo. Maecenas fermentum nunc id orci viverra, sed suscipit enim vehicula. Fusce in dapibus eros, sed ultricies libero. Sed efficitur risus vitae lectus condimentum, at pellentesque est suscipit.</p></div>
+        </article>
+        <article class="article-grid__article">
+            <header>
+                <div class="article-grid__image" style="background-image: url(http://lorempixel.com/400/100/);"></div>
+                <h2 class="article-grid__title"><a href="#">New Gear Review</a></h2>
+            </header>
+            <div class="text"><p>Sed efficitur risus vitae lectus condimentum, at pellentesque est suscipit. Mauris elit felis, sagittis id magna vitae, tempor sollicitudin nulla. Integer convallis ligula posuere nulla lobortis, at venenatis orci imperdiet.</p></div>
+        </article>
+    </main>
+    <aside class="grid-page__sideline">
+        <div class="page-intro text">
+            <h2>Hi, I'm Michał!</h2>
+            <p>I'm a mediocre age grouper, trying hard to improve, sharing findings, concerns and questions as I go. Mauris elit felis, sagittis id magna vitae, tempor sollicitudin nulla. Integer convallis ligula posuere nulla lobortis, at venenatis orci imperdiet. <a href="/about/">Read more</a>.</p>
+        </div>
+    </aside>
+</div>
 
 <div class="highlights">
-    <nav class="highlights__entry">
-        <h3 class="highlights__header">Upcoming Races</h3>
-        <ul class="races">
-            {{ range (.Site.GetPage "section" "races").Sections.ByDate }}
-            <li class="races__entry">{{ if .Pages }}<a href="{{ .URL }}">{{ end }}<time class="races__date" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "Jan 2" }}</time><span class="races__title">{{ .Title }}</span>{{ if .Pages }}</a>{{ end }}</li>
-            {{ end }}
-        </ul>
-    </nav>
-    <nav class="highlights__entry">
-        <h3 class="highlights__header">Current Training</h3>
-        <ul class="resources">
-            <li class="resources__entry"><a href="/training/plans/2017/" class="resources__link">Yearly Plan</a></li>
-            <li class="resources__entry"><a href="/training/plans/2017/base-3/" class="resources__link">Weekly Plan</a></li>
-        </ul>
-    </nav>
-    <iframe class="highlights__entry" height="160" width="300" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/athletes/17745574/activity-summary/00ce09fd56e435e96d599ec456e44ef89d58c082"></iframe>
+    <div class="grid-page">
+        <div class="grid-page__content">
+            <nav class="highlights__entry">
+                <h3 class="highlights__header">Upcoming Races</h3>
+                <ul class="races">
+                    {{ range (.Site.GetPage "section" "races").Sections.ByDate }}
+                    <li class="races__entry">{{ if .Pages }}<a href="{{ .URL }}">{{ end }}<time class="races__date" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "Jan 2" }}</time><span class="races__title">{{ .Title }}</span>{{ if .Pages }}</a>{{ end }}</li>
+                    {{ end }}
+                </ul>
+            </nav>
+            <nav class="highlights__entry">
+                <h3 class="highlights__header">Current Training</h3>
+                <ul class="resources">
+                    <li class="resources__entry"><a href="/training/plans/2017/" class="resources__link">Yearly Plan</a></li>
+                    <li class="resources__entry"><a href="/training/plans/2017/base-3/" class="resources__link">Weekly Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="grid-page__sideline">
+            <iframe class="highlights__entry" height="200" width="300" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/athletes/17745574/activity-summary/00ce09fd56e435e96d599ec456e44ef89d58c082"></iframe>
+        </div>
+    </div>
 </div>
 
 {{ partial "footer.html" . }}
