@@ -40,9 +40,11 @@
                 </ul>
             </nav>
         </div>
+        {{ if .Site.Params.Strava }}
         <div class="grid-page__sideline">
-            <iframe class="highlights__entry" height="200" width="300" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/athletes/17745574/activity-summary/00ce09fd56e435e96d599ec456e44ef89d58c082"></iframe>
+            <iframe class="highlights__entry" height="200" width="300" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/athletes/{{ .Site.Params.Strava.AthleteId }}/activity-summary/{{ .Site.Params.Strava.WidgetId }}"></iframe>
         </div>
+        {{ end }}
     </div>
 </div>
 
