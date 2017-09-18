@@ -151,9 +151,70 @@ html {
     display: flex;
 
     &__entry {
+        box-sizing: border-box;
         flex: 1 0 33%;
         padding: 1em;
-        box-sizing: border-box;
+    }
+
+    &__header {
+        font-family: $font-header;
+    }
+}
+
+.races {
+    list-style: none;
+    padding: 0;
+
+    &__entry {
+        & + & {
+            margin-top: .6em;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+
+            .races__title {
+                border-bottom: 1px solid #000;
+            }
+        }
+    }
+
+    &__title {
+        display: inline-block;
+    }
+
+    &__date {
+        background: $color-background;
+        color: #FFF;
+        display: inline-block;
+        margin-right: .4em;
+        padding: .4em;
+        text-align: right;
+        width: 3.4em;
+    }
+}
+
+.resources {
+    list-style: none;
+    padding: 0;
+
+    &__entry {
+        & + & {
+            margin-top: .6em;
+        }
+    }
+
+    &__link {
+        border-bottom: 1px solid #000;
+        color: #000;
+        display: inline-block;
+        margin: .4em 0;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-highlight;
+        }
     }
 }
 

@@ -28,18 +28,18 @@
 
 <div class="highlights">
     <nav class="highlights__entry">
-        <h3>Upcoming Races</h3>
-        <ul>
+        <h3 class="highlights__header">Upcoming Races</h3>
+        <ul class="races">
             {{ range (.Site.GetPage "section" "races").Sections.ByDate }}
-            <li>{{ .Date.Format "Jan 2" }} {{ if .Pages }}<a href="{{ .URL }}">{{ end }}{{ .Title }}{{ if .Pages }}</a>{{ end }}</li>
+            <li class="races__entry">{{ if .Pages }}<a href="{{ .URL }}">{{ end }}<time class="races__date" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "Jan 2" }}</time><span class="races__title">{{ .Title }}</span>{{ if .Pages }}</a>{{ end }}</li>
             {{ end }}
         </ul>
     </nav>
     <nav class="highlights__entry">
-        <h3>Current Training</h3>
-        <ul>
-            <li><a href="/training/plans/2017/">Yearly Plan</a></li>
-            <li><a href="/training/plans/2017/base-3/">Weekly Plan</a></li>
+        <h3 class="highlights__header">Current Training</h3>
+        <ul class="resources">
+            <li class="resources__entry"><a href="/training/plans/2017/" class="resources__link">Yearly Plan</a></li>
+            <li class="resources__entry"><a href="/training/plans/2017/base-3/" class="resources__link">Weekly Plan</a></li>
         </ul>
     </nav>
     <iframe class="highlights__entry" height="160" width="300" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/athletes/17745574/activity-summary/00ce09fd56e435e96d599ec456e44ef89d58c082"></iframe>
