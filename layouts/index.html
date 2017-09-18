@@ -1,3 +1,14 @@
 {{ partial "header.html" . }}
 
+<main>
+    {{ range first 4 (where .Site.Pages "Kind" "page") }}
+    <article>
+        <header>
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        </header>
+        {{ .Summary }}
+    </article>
+    {{ end }}
+</main>
+
 {{ partial "footer.html" . }}
