@@ -11,7 +11,7 @@ $responsive-medium-large: "only screen and (min-width: #{$medium-breakpoint})";
 $responsive-large: "only screen and (min-width: #{$large-breakpoint})";
 
 // Common Content Sizing
-$line-height: 1.428;
+$line-height: 1.6;
 $width-total: 1300px;
 $width-content-relative: 62%;
 $width-content-absolute: .62 * $width-total;
@@ -25,6 +25,8 @@ $font-header: "Julius Sans One", Helvetica, Arial, sans-serif;
 // Colors
 $color-background: #000;
 $color-highlight: #FF0;
+$color-highlight-background: darken($color-highlight, 5%);
+$color-highlight-dark: darken($color-highlight, 10%);
 
 html {
     font: {
@@ -155,8 +157,7 @@ html {
             text-decoration: none;
 
             &:hover {
-                // color: $color-highlight;
-                border-bottom: 2px solid darken($color-highlight, 5%);
+                border-bottom: 2px solid $color-highlight-dark;
             }
         }
     }
@@ -239,14 +240,90 @@ html {
     }
 }
 
+.article {
+    &__header {
+        margin-bottom: 3em;
+    }
+
+    &__image {
+        background: {
+            position: 50% 50%;
+            repeat: no-repeat;
+            size: cover;
+        }
+        height: 300px;
+        width: 100%;
+    }
+
+    &__time {
+        display: block;
+        font: {
+            family: $font-header;
+            size: .9em;
+        }
+        margin: 3rem 0 0 10rem;
+    }
+
+    &__title {
+        font-family: $font-header;
+        margin: .2em 0 0 10rem;
+    }
+
+    &__stats {
+        color: lighten(#000, 50%);
+        position: absolute;
+        left: 0;
+        width: 10rem;
+        box-sizing: border-box;
+        padding: 0 1em;
+    }
+
+    &__text {
+        margin-left: 10rem;
+    }
+}
+
+.stats {
+    line-height: $line-height;
+
+    &__entry {
+        display: block;
+    }
+}
+
 .text {
-    p {
-        line-height: $line-height;
+    line-height: $line-height;
+
+    h2, h3 {
+        margin: 1.2em 0 .4em;
+    }
+
+    li {
+        margin: .4em 0;
     }
 
     a {
-        border-bottom: 1px solid $color-highlight;
+        border-bottom: 1px solid $color-highlight-dark;
         color: inherit;
         text-decoration: none;
+
+        &:hover {
+            border-color: #000;
+        }
+    }
+
+    .footnotes {
+        margin-top: 3em;
+        font-size: .9em;
+    }
+
+    &--dark {
+        a {
+            border-bottom-color: $color-highlight;
+
+            &:hover {
+                color: $color-highlight;
+            }
+        }
     }
 }

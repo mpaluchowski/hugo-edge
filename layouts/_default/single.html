@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+
+<div class="grid-page">
+    <main class="grid-page__content">
+        <article class="article">
+            <header class="article__header">
+                {{ with .Params.image }}<div class="article__image" style="background-image: url({{ . }})"></div>{{ end }}
+
+                <time class="article__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "Monday, January 2, 2006 15:04" }}</time>
+
+                <h1 class="article__title">{{ .Title }}</h1>
+
+            </header>
+
+            <div class="article__stats stats">
+                <span class="stats__entry">{{ .WordCount }} words</span>
+                <span class="stats__entry">{{ .ReadingTime }} minutes to read</span>
+            </div>
+
+            <section class="article__text text">
+                {{ .Content }}
+            </section>
+        </article>
+    </main>
+</div>
+
+{{ partial "footer.html" . }}
