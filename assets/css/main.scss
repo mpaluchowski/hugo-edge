@@ -382,6 +382,30 @@ html {
             margin-top: 3rem;
         }
     }
+
+    figure {
+        @media #{$responsive-small} {
+            margin: 0 -1em 1em;
+        }
+
+        @media #{$responsive-medium-large} {
+            max-width: 60%;
+
+            &.left {
+                margin: 0 2em 1em -10rem;
+                float: left;
+            }
+
+            &.right {
+                margin: 0 -10rem 1em 2em;
+                float: right;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+    }
 }
 
 .stats {
