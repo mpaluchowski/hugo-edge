@@ -366,7 +366,7 @@ html {
     }
 
     @media #{$responsive-small} {
-        &__time, &__title, &__stats, &__text {
+        &__time, &__title, &__stats, &__text, &__comments {
             padding: 0 1rem;
         }
     }
