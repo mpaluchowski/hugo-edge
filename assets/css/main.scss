@@ -316,10 +316,6 @@ html {
 .article {
     margin-bottom: 5rem;
 
-    @media #{$responsive-small} {
-        padding: 0 1em;
-    }
-
     @media #{$responsive-medium} {
         padding-right: 1em;
     }
@@ -361,6 +357,12 @@ html {
             padding: 0 1em;
             position: absolute;
             width: 10rem;
+        }
+    }
+
+    @media #{$responsive-small} {
+        &__time, &__title, &__stats, &__text {
+            padding: 0 1rem;
         }
     }
 
