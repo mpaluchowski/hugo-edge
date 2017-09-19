@@ -350,6 +350,7 @@ html {
 
     &__stats {
         color: lighten(#000, 50%);
+        font-size: .8em;
         box-sizing: border-box;
 
         @media #{$responsive-medium-large} {
