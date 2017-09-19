@@ -20,6 +20,10 @@
             <section class="article__text text">
                 {{ .Content }}
             </section>
+
+            <div class="article__comments text">
+                {{ template "_internal/disqus.html" . }}
+            </div>
         </article>
     </main>
 </div>

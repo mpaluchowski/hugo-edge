@@ -360,6 +360,10 @@ html {
         }
     }
 
+    &__comments {
+        margin-top: 3em;
+    }
+
     @media #{$responsive-small} {
         &__time, &__title, &__stats, &__text {
             padding: 0 1rem;
@@ -367,7 +371,7 @@ html {
     }
 
     @media #{$responsive-medium-large} {
-        &__time, &__title, &__text {
+        &__time, &__title, &__text, &__comments {
             margin-left: 10rem;
         }
     }
