@@ -62,14 +62,14 @@ html {
     }
 
     &__navigation {
-        margin-top: 2em;
+        margin-top: 1em;
     }
 }
 
 .footer {
     background: $color-background;
     color: #FFF;
-    padding: 1em 1em 2em;
+    padding: .4em 1em 2em;
 
     &__copyright {
         font-size: .8em;
@@ -78,9 +78,12 @@ html {
 }
 
 .nav-sections {
+    margin-left: 1em;
+
     &__link {
         color: #FFF;
         display: inline-block;
+        margin: 1em 2em 0 0;
         text-decoration: none;
 
         &--current {
@@ -89,14 +92,6 @@ html {
 
         &:hover {
             color: $color-highlight;
-        }
-
-        & + & {
-            margin-left: 2em;
-        }
-
-        &:first-child {
-            margin-left: 1em;
         }
 
         &:before {
