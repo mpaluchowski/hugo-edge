@@ -13,10 +13,10 @@ $responsive-large: "only screen and (min-width: #{$large-breakpoint})";
 // Common Content Sizing
 $line-height: 1.6;
 $width-total: 1300px;
-$width-content-relative: 62%;
-$width-content-absolute: .62 * $width-total;
-$width-side-relative: 38%;
-$width-side-absolute: .38 * $width-total;
+$width-content-proportion: 1.61;
+$width-side-proportion: 1;
+$width-content-relative: $width-content-proportion / ($width-content-proportion + $width-side-proportion) * 100%;
+$width-side-relative: $width-side-proportion / ($width-content-proportion + $width-side-proportion) * 100%;
 
 // Fonts
 $font-default: "Open Sans", Helvetica, Arial, sans-serif;
@@ -114,7 +114,7 @@ html {
     min-height: 100vh;
 
     &__main {
-        flex: 1;
+        flex: 1 1 auto;
     }
 }
 
@@ -123,14 +123,17 @@ html {
     max-width: $width-total;
     width: 100%;
 
-    @media #{$responsive-small} {
+    @media #{$responsive-small-medium} {
         flex-direction: column;
     }
 
     &__content {
-        flex: 1 1 $width-content-relative;
+        @media #{$responsive-medium} {
+            width: 100%;
+        }
 
         @media #{$responsive-medium-large} {
+            flex: 0 $width-content-proportion auto;
 
             &--columns {
                 display: flex;
@@ -138,18 +141,22 @@ html {
                 align-content: flex-start;
 
                 > * {
-                    flex: 0 1 50%;
+                    flex: 1 1 auto;
+                    width: 50%;
                 }
             }
         }
 
         @media #{$responsive-large} {
-            max-width: $width-content-relative;
+            width: $width-content-relative;
         }
     }
 
     &__sideline {
-        flex: 1 1 $width-side-relative;
+        @media #{$responsive-large} {
+            flex: $width-side-proportion $width-side-proportion auto;
+            width: $width-side-relative;
+        }
     }
 }
 
@@ -196,7 +203,8 @@ html {
         padding: 1em;
 
         &:first-child {
-            flex: 1 0 100%;
+            flex: 1 0 auto;
+            width: 100%;
         }
 
         &:nth-child(n + 2) {
@@ -226,12 +234,11 @@ html {
 }
 
 .page-intro {
-    @media #{$responsive-small} {
+    @media #{$responsive-small-medium} {
         padding: 0 1em 1em;
     }
 
-    @media #{$responsive-medium-large} {
-        max-width: 20em;
+    @media #{$responsive-large} {
         padding: 1em;
     }
 }
