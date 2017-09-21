@@ -17,6 +17,7 @@ $width-content-proportion: 1.61;
 $width-side-proportion: 1;
 $width-content-relative: $width-content-proportion / ($width-content-proportion + $width-side-proportion) * 100%;
 $width-side-relative: $width-side-proportion / ($width-content-proportion + $width-side-proportion) * 100%;
+$width-content-absolute: $width-content-proportion / ($width-content-proportion + $width-side-proportion) * $width-total;
 
 // Fonts
 $font-default: "Open Sans", Helvetica, Arial, sans-serif;
@@ -128,12 +129,9 @@ html {
     }
 
     &__content {
-        @media #{$responsive-medium} {
-            width: 100%;
-        }
-
         @media #{$responsive-medium-large} {
             flex: 0 $width-content-proportion auto;
+            width: 100%;
 
             &--columns {
                 display: flex;
@@ -148,7 +146,7 @@ html {
         }
 
         @media #{$responsive-large} {
-            width: $width-content-relative;
+            max-width: $width-content-absolute;
         }
     }
 
