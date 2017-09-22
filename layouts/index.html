@@ -34,6 +34,15 @@
                     {{ end }}
                 </ul>
             </nav>
+
+            <nav class="highlights__entry">
+                <h3 class="highlights__header">Recent Races</h3>
+                <ul class="races">
+                    {{ range first 2 (where (.Site.GetPage "section" "races").Sections.ByDate "Date" "<" now) }}
+                    <li class="races__entry">{{ if .Pages }}<a href="{{ .URL }}">{{ end }}<time class="races__date" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "Jan 2" }}</time><span class="races__title">{{ .Title }}</span>{{ if .Pages }}</a>{{ end }}</li>
+                    {{ end }}
+                </ul>
+            </nav>
             {{ with .Site.Params.TrainingPlans }}
             <nav class="highlights__entry">
                 <h3 class="highlights__header">Current Training</h3>
