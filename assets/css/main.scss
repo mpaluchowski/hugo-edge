@@ -22,7 +22,7 @@ $text-indent: 10rem;
 
 // Fonts
 $font-default: "Open Sans", Helvetica, Arial, sans-serif;
-$font-header: "Julius Sans One", Helvetica, Arial, sans-serif;
+$font-header: "Alegreya Sans SC", Helvetica, Arial, sans-serif;
 
 // Colors
 $color-background: #000;
@@ -44,12 +44,8 @@ html {
 
     &__title {
         display: inline-block;
-        font: {
-            size: 2rem;
-            weight: 400;
-            family: $font-header;
-        }
-        margin: 0 1em 0 0;
+        font: 300 2.5rem $font-header;
+        margin: 0 .8em 0 0;
 
         a {
             color: $color-highlight;
@@ -64,7 +60,7 @@ html {
     }
 
     &__navigation {
-        margin-top: 1em;
+        margin-top: .5em;
     }
 }
 
@@ -171,16 +167,12 @@ html {
 
     &__time {
         display: block;
-        font: {
-            family: $font-header;
-            size: .9em;
-        }
+        font: 300 1.2em $font-header
     }
 
     &__title {
         color: $color-text-inactive;
-        font-family: $font-header;
-        line-height: $line-height;
+        font: 400 2em $font-header;
         margin: 0;
 
         a {
@@ -264,11 +256,12 @@ html {
     &__entry {
         box-sizing: border-box;
         flex: 1 0 33%;
-        margin: 1em;
+        margin: 1.2rem 1rem;
     }
 
     &__header {
-        font-family: $font-header;
+        font: 400 1.6em $font-header;
+        margin: 0 0 1rem;
     }
 }
 
@@ -337,7 +330,7 @@ html {
     }
 
     &__header {
-        margin-bottom: 3em;
+        margin-bottom: 2.6em;
     }
 
     &__image {
@@ -352,16 +345,13 @@ html {
 
     &__time {
         display: block;
-        font: {
-            family: $font-header;
-            size: .9em;
-        }
-        margin-top: 3rem;
+        font: 300 1.2em $font-header;
+        margin-top: 2.8rem;
     }
 
     &__title {
-        font-family: $font-header;
-        margin-top: .2em;
+        font: 400 2.6em $font-header;
+        margin-top: 0;
     }
 
     &__stats {
