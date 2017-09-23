@@ -6,7 +6,7 @@
             <header class="article__header">
                 {{ with .Params.image }}<div class="article__image" style="background-image: url({{ . }})"></div>{{ end }}
 
-                <time class="article__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "Monday, January 2, 2006 15:04" }}</time>
+                <time class="article__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "Monday, January 2, 2006" }}</time>
 
                 <h1 class="article__title">{{ .Title }}</h1>
 
