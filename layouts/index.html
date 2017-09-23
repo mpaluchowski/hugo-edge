@@ -16,8 +16,9 @@
     <aside class="grid-page__sideline">
         {{ with .Site.Params.Intro }}
         <div class="page-intro text">
-            <h2 class="page-intro__header">Hi, I'm {{ .name | plainify }}!</h2>
-            <p>{{ .text | safeHTML }} <a href="/about/">Read more</a>.</p>
+            {{ with .gravataremail }}<img class="page-intro__photo" src="https://www.gravatar.com/avatar/{{ trim . " " | lower | md5 }}?s=160">{{ end }}
+            <div class="page-intro__header">Hi, I'm {{ .name | plainify }}!</div>
+            <p>{{ .text | safeHTML }}</p>
         </div>
         {{ end }}
     </aside>

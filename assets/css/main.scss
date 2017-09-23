@@ -233,12 +233,27 @@ html {
 }
 
 .page-intro {
+    font-size: .9rem;
+    overflow: auto;
+
     @media #{$responsive-small-medium} {
         padding: 0 1em 1em;
     }
 
     @media #{$responsive-large} {
-        padding: 1em;
+        padding: 2em 1em 1em;
+    }
+
+    &__photo {
+        float: right;
+        margin: 0 0 1em 1em;
+    }
+
+    &__header {
+        font: {
+            size: 1.4em;
+            weight: bold;
+        }
     }
 }
 
