@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
-<div class="page__main grid-page">
-    <main class="grid-page__content grid-page__content--columns articles article-grid">
+<div class="page__main content">
+    <main class="content__main articles article-grid">
         {{ range first 5 (where .Site.Pages "Kind" "page") }}
         <article class="articles__article article-grid__article">
             <header class="articles__header">
@@ -13,7 +13,7 @@
         </article>
         {{ end }}
     </main>
-    <aside class="grid-page__sideline">
+    <aside class="content__side">
         {{ with .Site.Params.Intro }}
         <div class="page-intro text">
             {{ with .gravataremail }}<img class="page-intro__photo" src="https://www.gravatar.com/avatar/{{ trim . " " | lower | md5 }}?s=160">{{ end }}
@@ -25,8 +25,8 @@
 </div>
 
 <div class="highlights">
-    <div class="grid-page">
-        <div class="grid-page__content grid-page__content--columns">
+    <div class="content">
+        <div class="content__main highlights__main">
             <nav class="highlights__entry">
                 <h3 class="highlights__header">Upcoming Races</h3>
                 <ul class="races">
@@ -55,7 +55,7 @@
             {{ end }}
         </div>
         {{ if .Site.Params.Strava }}
-        <div class="grid-page__sideline">
+        <div class="content__side">
             <iframe class="highlights__entry" height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/{{ .Site.Params.Strava.AthleteId }}/latest-rides/{{ .Site.Params.Strava.WidgetId }}'></iframe>
         </div>
         {{ end }}
