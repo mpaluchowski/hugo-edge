@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<div class="grid-screen__main grid-page">
+<div class="page__main grid-page">
     <main class="grid-page__content grid-page__content--columns articles article-grid">
         {{ range first 5 (where .Site.Pages "Kind" "page") }}
         <article class="articles__article article-grid__article">
