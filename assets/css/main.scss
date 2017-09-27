@@ -208,6 +208,7 @@ html {
 }
 
 .article-list {
+    box-sizing: border-box;
     margin-bottom: 5rem;
 
     @media #{$responsive-small} {
@@ -334,6 +335,16 @@ html {
         &:hover {
             color: $color-highlight;
         }
+    }
+}
+
+/* Sections */
+
+.section {
+    &__title {
+        font: 400 2.6em $font-header;
+        margin-top: 3rem;
+        margin-bottom: 2em;
     }
 }
 
