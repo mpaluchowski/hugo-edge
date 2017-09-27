@@ -14,6 +14,7 @@ $ git clone https://github.com/mpaluchowski/hugo-triathlete themes/triathlete
 Build the [SASS](http://sass-lang.com/) files from `/assets/css` into `/static/css`:
 
 ```shell
+$ cd themes/triathlete
 $ sass -E UTF-8 --sourcemap=none --style compressed --update assets:static
 ```
 
