@@ -108,6 +108,8 @@ html {
     }
 }
 
+/* General Page Layout */
+
 .page {
     display: flex;
     flex-direction: column;
@@ -145,6 +147,8 @@ html {
         }
     }
 }
+
+/* Article Listings */
 
 .articles {
     &__image {
@@ -222,6 +226,8 @@ html {
         }
     }
 }
+
+/* Home Page */
 
 .page-intro {
     font-size: .9rem;
@@ -330,6 +336,8 @@ html {
         }
     }
 }
+
+/* Article Page */
 
 .article {
     margin-bottom: 5rem;
@@ -460,6 +468,8 @@ html {
     }
 }
 
+/* General Text Stylinh */
+
 .text {
     line-height: $line-height;
 
@@ -515,6 +525,8 @@ html {
         }
     }
 }
+
+/* Content Elements */
 
 .youtube {
     height: 0;
