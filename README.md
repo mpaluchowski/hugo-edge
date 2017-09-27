@@ -38,7 +38,7 @@ Renders a single [Strava](https://www.strava.com) activity:
 {{< strava-activity id="840057488" hash="6a93a704064cb3cf22b266a1698cf9870fd1765a" >}}
 ```
 
-Where `id` and `hash` are values you'll get when you open an activity, open the "Embed on Blog" dialog, which'll offer you an `IFRAME` code:
+Where `id` and `hash` are values you'll get when you open an activity, open the "Embed on Blog" dialog, which'll offer you an `IFRAME` code, with the values baked into the URL:
 
 ```html
 <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/<id>/embed/<hash>'></iframe>
