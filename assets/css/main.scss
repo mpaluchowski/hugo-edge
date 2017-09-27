@@ -341,10 +341,7 @@ html {
 
 .article {
     margin-bottom: 5rem;
-
-    @media #{$responsive-medium} {
-        padding-right: 1em;
-    }
+    max-width: calc(#{$width-content-absolute} + #{$text-indent});
 
     &__header {
         margin-bottom: 2.6em;
@@ -357,6 +354,7 @@ html {
             size: cover;
         }
         height: 300px;
+        max-width: $width-content-absolute;
         width: 100%;
     }
 
@@ -375,10 +373,10 @@ html {
         color: lighten(#000, 50%);
         font-size: .8em;
         box-sizing: border-box;
+        padding: 0 1rem;
 
         @media #{$responsive-medium-large} {
             left: 0;
-            padding: 0 1em;
             position: absolute;
             width: $text-indent;
         }
@@ -388,15 +386,17 @@ html {
         margin-top: 3em;
     }
 
-    @media #{$responsive-small} {
-        &__time, &__title, &__stats, &__text, &__comments {
+    &__time, &__title, &__text, &__comments {
+        @media #{$responsive-small-medium} {
             padding: 0 1rem;
         }
-    }
 
-    @media #{$responsive-medium-large} {
-        &__time, &__title, &__text, &__comments {
+        @media #{$responsive-medium-large} {
             margin-left: $text-indent;
+        }
+
+        @media #{$responsive-large} {
+            margin-right: $text-indent;
         }
     }
 
@@ -408,7 +408,13 @@ html {
 
     figure {
         @media #{$responsive-small} {
-            margin: 0 -1em 1em;
+            margin: 0 -1rem 1rem;
+        }
+
+        @media #{$responsive-medium} {
+            &.right {
+                margin: 0 -1rem 1em 2em;
+            }
         }
 
         @media #{$responsive-medium-large} {
@@ -420,8 +426,13 @@ html {
             }
 
             &.right {
-                margin: 0 (-$text-indent) 1em 2em;
                 float: right;
+            }
+        }
+
+        @media #{$responsive-large} {
+            &.right {
+                margin: 0 (-$text-indent) 1em 2em;
             }
         }
     }
