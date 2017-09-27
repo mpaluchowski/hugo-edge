@@ -38,6 +38,8 @@ html {
     }
 }
 
+/* Header, Foot & Navigation */
+
 .header {
     background: $color-background;
     padding: 1em;
@@ -106,7 +108,9 @@ html {
     }
 }
 
-.grid-screen {
+/* General Page Layout */
+
+.page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -116,7 +120,7 @@ html {
     }
 }
 
-.grid-page {
+.content {
     display: flex;
     max-width: $width-total;
     width: 100%;
@@ -125,21 +129,10 @@ html {
         flex-direction: column;
     }
 
-    &__content {
+    &__main {
         @media #{$responsive-medium-large} {
             flex: 0 $width-content-proportion auto;
             width: 100%;
-
-            &--columns {
-                display: flex;
-                flex-flow: row wrap;
-                align-content: flex-start;
-
-                > * {
-                    flex: 0 1 auto;
-                    width: 50%;
-                }
-            }
         }
 
         @media #{$responsive-large} {
@@ -147,13 +140,15 @@ html {
         }
     }
 
-    &__sideline {
+    &__side {
         @media #{$responsive-large} {
             flex: $width-side-proportion $width-side-proportion auto;
             width: $width-side-relative;
         }
     }
 }
+
+/* Article Listings */
 
 .articles {
     &__image {
@@ -187,11 +182,19 @@ html {
 }
 
 .article-grid {
+    align-content: flex-start;
+    display: flex;
+    flex-flow: row wrap;
     padding: 1em 0;
 
     &__article {
         box-sizing: border-box;
         padding: 1em;
+
+        @media #{$responsive-medium-large} {
+            flex: 0 1 auto;
+            width: 50%;
+        }
 
         &:first-child {
             flex: 1 0 auto;
@@ -205,6 +208,7 @@ html {
 }
 
 .article-list {
+    box-sizing: border-box;
     margin-bottom: 5rem;
 
     @media #{$responsive-small} {
@@ -223,6 +227,8 @@ html {
         }
     }
 }
+
+/* Home Page */
 
 .page-intro {
     font-size: .9rem;
@@ -251,12 +257,22 @@ html {
 
 .highlights {
     background: darken($color-highlight, 5%);
-    display: flex;
+
+    @media #{$responsive-medium-large} {
+        &__main {
+            display: flex;
+            flex-flow: row wrap;
+
+            .highlights__entry {
+                flex: 1 1 auto;
+                width: 50%;
+            }
+        }
+    }
 
     &__entry {
         box-sizing: border-box;
-        flex: 1 0 33%;
-        margin: 1.2rem 1rem;
+        padding: 1.2rem 1rem;
     }
 
     &__header {
@@ -322,12 +338,21 @@ html {
     }
 }
 
+/* Sections */
+
+.section {
+    &__title {
+        font: 400 2.6em $font-header;
+        margin-top: 3rem;
+        margin-bottom: 2em;
+    }
+}
+
+/* Article Page */
+
 .article {
     margin-bottom: 5rem;
-
-    @media #{$responsive-medium} {
-        padding-right: 1em;
-    }
+    max-width: calc(#{$width-content-absolute} + #{$text-indent});
 
     &__header {
         margin-bottom: 2.6em;
@@ -340,6 +365,7 @@ html {
             size: cover;
         }
         height: 300px;
+        max-width: $width-content-absolute;
         width: 100%;
     }
 
@@ -358,10 +384,10 @@ html {
         color: lighten(#000, 50%);
         font-size: .8em;
         box-sizing: border-box;
+        padding: 0 1rem;
 
         @media #{$responsive-medium-large} {
             left: 0;
-            padding: 0 1em;
             position: absolute;
             width: $text-indent;
         }
@@ -371,15 +397,17 @@ html {
         margin-top: 3em;
     }
 
-    @media #{$responsive-small} {
-        &__time, &__title, &__stats, &__text, &__comments {
+    &__time, &__title, &__text, &__comments {
+        @media #{$responsive-small-medium} {
             padding: 0 1rem;
         }
-    }
 
-    @media #{$responsive-medium-large} {
-        &__time, &__title, &__text, &__comments {
+        @media #{$responsive-medium-large} {
             margin-left: $text-indent;
+        }
+
+        @media #{$responsive-large} {
+            margin-right: $text-indent;
         }
     }
 
@@ -391,7 +419,13 @@ html {
 
     figure {
         @media #{$responsive-small} {
-            margin: 0 -1em 1em;
+            margin: 0 -1rem 1rem;
+        }
+
+        @media #{$responsive-medium} {
+            &.right {
+                margin: 0 -1rem 1em 2em;
+            }
         }
 
         @media #{$responsive-medium-large} {
@@ -403,8 +437,13 @@ html {
             }
 
             &.right {
-                margin: 0 (-$text-indent) 1em 2em;
                 float: right;
+            }
+        }
+
+        @media #{$responsive-large} {
+            &.right {
+                margin: 0 (-$text-indent) 1em 2em;
             }
         }
     }
@@ -450,6 +489,8 @@ html {
         }
     }
 }
+
+/* General Text Stylinh */
 
 .text {
     line-height: $line-height;
@@ -506,6 +547,8 @@ html {
         }
     }
 }
+
+/* Content Elements */
 
 .youtube {
     height: 0;

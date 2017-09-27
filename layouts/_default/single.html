@@ -1,31 +1,29 @@
 {{ partial "header.html" . }}
 
-<div class="grid-screen__main grid-page">
-    <main class="grid-page__content">
-        <article class="article">
-            <header class="article__header">
-                {{ with .Params.image }}<div class="article__image" style="background-image: url({{ . }})"></div>{{ end }}
+<main class="page__main">
+    <article class="article">
+        <header class="article__header">
+            {{ with .Params.image }}<div class="article__image" style="background-image: url({{ . }})"></div>{{ end }}
 
-                <time class="article__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "Monday, January 2, 2006" }}</time>
+            <time class="article__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "Monday, January 2, 2006" }}</time>
 
-                <h1 class="article__title">{{ .Title }}</h1>
+            <h1 class="article__title">{{ .Title }}</h1>
 
-            </header>
+        </header>
 
-            <div class="article__stats stats">
-                <span class="stats__entry">{{ .WordCount }} words</span>
-                <span class="stats__entry">{{ .ReadingTime }} minute{{if gt .ReadingTime 1}}s{{end}} to read</span>
-            </div>
+        <div class="article__stats stats">
+            <span class="stats__entry">{{ .WordCount }} words</span>
+            <span class="stats__entry">{{ .ReadingTime }} minute{{if gt .ReadingTime 1}}s{{end}} to read</span>
+        </div>
 
-            <section class="article__text text">
-                {{ .Content }}
-            </section>
+        <section class="article__text text">
+            {{ .Content }}
+        </section>
 
-            <div class="article__comments text">
-                {{ template "_internal/disqus.html" . }}
-            </div>
-        </article>
-    </main>
-</div>
+        <div class="article__comments text">
+            {{ template "_internal/disqus.html" . }}
+        </div>
+    </article>
+</main>
 
 {{ partial "footer.html" . }}
