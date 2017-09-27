@@ -1,3 +1,5 @@
 {{ if and (.Get "id") (.Get "hash") }}
-<iframe height="405" style="width: 100%; max-width: 590px;" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/activities/{{ .Get "id" }}/embed/{{ .Get "hash" }}"></iframe>
+<div class="fixed-wrapper">
+    <iframe style="height: 405px; width: 100%; min-width: 360px; max-width: 590px;" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/activities/{{ .Get "id" }}/embed/{{ .Get "hash" }}"></iframe>
+</div>
 {{ end }}
