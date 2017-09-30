@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ partialCached "header.html" . .Section }}
 
 {{ $children := (.Pages | union .Sections).ByDate.Reverse }}
 {{ if $children }}
@@ -36,4 +36,4 @@
 </main>
 {{ end }}
 
-{{ partial "footer.html" . }}
+{{ partialCached "footer.html" . .Section }}

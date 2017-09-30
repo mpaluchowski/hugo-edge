@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ partialCached "header.html" . .Section }}
 
 <main class="page__main">
     <article class="article">
@@ -26,4 +26,4 @@
     </article>
 </main>
 
-{{ partial "footer.html" . }}
+{{ partialCached "footer.html" . .Section }}
