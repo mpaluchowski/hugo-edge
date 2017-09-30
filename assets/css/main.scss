@@ -393,11 +393,16 @@ html {
         }
     }
 
+    &__tags {
+        font-size: .8em;
+        margin-top: 2.6em;
+    }
+
     &__comments {
         margin-top: 3em;
     }
 
-    &__time, &__title, &__text, &__comments {
+    &__time, &__title, &__text, &__tags, &__comments {
         @media #{$responsive-small-medium} {
             padding: 0 1rem;
         }
@@ -486,6 +491,30 @@ html {
                     content: ", ";
                 }
             }
+        }
+    }
+}
+
+.tags {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+
+    &__tag {
+        display: inline-block;
+        margin-left: .2em;
+    }
+
+    &__link {
+        background: $color-background;
+        color: #FFF;
+        display: block;
+        padding: .4em .6em;
+        text-decoration: none;
+
+        &:hover {
+            background: $color-highlight;
+            color: #000;
         }
     }
 }
