@@ -43,3 +43,18 @@
                 {{- end }}
             </nav>
         </header>
+
+        {{ block "main" . }}{{ end }}
+
+        <footer class="footer">
+            <nav class="nav-sections">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main -}}
+                <a href="{{ .URL }}" class="nav-sections__link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} nav-sections__link--current{{ end }}">{{ .Name }}</a>
+                {{- end }}
+            </nav>
+
+            <div class="footer__copyright text text--dark">{{ .Site.Copyright | safeHTML }}</div>
+        </footer>
+    </body>
+</html>
