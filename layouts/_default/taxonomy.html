@@ -1,14 +1,12 @@
 {{ define "main" }}
-
-{{ $children := (.Pages | union .Sections).ByDate.Reverse }}
-{{ if $children }}
 <main class="page__main content section">
     <div class="content__main articles article-list">
         <header class="section__header">
+            <div class="section__label">Posts about:</div>
             <h1 class="section__title">{{ .Title }}</h1>
         </header>
 
-        {{ range $children }}
+        {{ range .Data.Pages }}
         <article class="articles__article article-list__article">
             <header class="articles__header">
                 {{ with .Params.image }}<div class="articles__image" style="background-image: url({{ . }});"></div>{{ end }}
@@ -20,22 +18,4 @@
         {{ end }}
     </div>
 </main>
-{{ else }}
-<main class="page__main">
-    <article class="article article--section">
-        <header class="article__header">
-            {{ with .Params.image }}<div class="article__image" style="background-image: url({{ . }})"></div>{{ end }}
-
-            <h1 class="article__title">{{ .Title }}</h1>
-        </header>
-
-        {{ if .Content }}
-        <section class="article__text text">
-            {{ .Content }}
-        </section>
-        {{ end }}
-    </article>
-</main>
-{{ end }}
-
-{{ end }}
+{{ end}}
