@@ -20,9 +20,22 @@
             {{ .Content }}
         </section>
 
-        <div class="article__comments text">
-            {{ template "_internal/disqus.html" . }}
-        </div>
+        <footer class="article__foter">
+            {{ with .Params.tags}}
+            <nav class="article__tags">
+                More:
+                <ul class="tags">
+                    {{ range sort . }}
+                    <li class="tags__tag"><a class="tags__link" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+            {{ end }}
+
+            <div class="article__comments text">
+                {{ template "_internal/disqus.html" . }}
+            </div>
+        </footer>
     </article>
 </main>
 
