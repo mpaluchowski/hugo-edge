@@ -557,6 +557,28 @@ html {
         }
     }
 
+    blockquote {
+        color: lighten($color-text, 30%);
+        position: relative;
+
+        &:before {
+            border-left: 5px solid $color-highlight-dark;
+            content: "";
+            height: 100%;
+            left: calc(-1em - 5px);
+            position: absolute;
+            top: 0;
+        }
+
+        > *:first-child {
+            padding-top: .4em;
+        }
+
+        > *:last-child {
+            padding-bottom: .4em;
+        }
+    }
+
     a {
         border-bottom: 1px solid $color-highlight-dark;
         color: inherit;
