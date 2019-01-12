@@ -15,7 +15,7 @@ Build the [SASS](http://sass-lang.com/) files from `/assets/css` into `/static/c
 
 ```shell
 $ cd themes/triathlete
-$ sass -E UTF-8 --sourcemap=none --style compressed --update assets:static
+$ sass -E UTF-8 --sourcemap=none --style compressed --update assets:assets
 ```
 
 Then tell Hugo to render your site with the theme:
