@@ -1,6 +1,6 @@
-# Triathlete Hugo Theme
+# Edge Hugo Theme
 
-Triathlete is a Hugo theme for personal triathlete websites. Originally built for my own site at https://triathlete.paluchowski.com
+Edge is a Hugo theme for personal cycling websites. Originally built for my own site at https://cycling.paluchowski.com
 
 ## Installation
 
@@ -8,20 +8,20 @@ Clone the repository to your `/themes` directory, ie.
 
 ```shell
 $ cd /your/hugo/site
-$ git clone https://github.com/mpaluchowski/hugo-triathlete themes/triathlete
+$ git clone https://github.com/mpaluchowski/hugo-edge themes/edge
 ```
 
 Build the [SASS](http://sass-lang.com/) files from `/assets/css` into `/static/css`:
 
 ```shell
-$ cd themes/triathlete
+$ cd themes/edge
 $ sass -E UTF-8 --sourcemap=none --style compressed --update assets:assets
 ```
 
 Then tell Hugo to render your site with the theme:
 
 ```shell
-$ hugo --theme=triathlete
+$ hugo --theme=edge
 ```
 
 ## Customization
