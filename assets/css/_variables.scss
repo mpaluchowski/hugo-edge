@@ -10,12 +10,7 @@ $responsive-large: "only screen and (min-width: #{$large-breakpoint})";
 
 // Common Content Sizing
 $line-height: 1.6;
-$width-total: 1300px;
-$width-content-proportion: 1.61;
-$width-side-proportion: 1;
-$width-content-relative: round($width-content-proportion / ($width-content-proportion + $width-side-proportion) * 100%);
-$width-side-relative: round($width-side-proportion / ($width-content-proportion + $width-side-proportion) * 100%);
-$width-content-absolute: round($width-content-proportion / ($width-content-proportion + $width-side-proportion) * $width-total);
+$width-total: 960px;
 $text-indent: 10rem;
 
 // Fonts

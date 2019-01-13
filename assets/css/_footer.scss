@@ -1,7 +1,14 @@
+@import "variables";
+
 .footer {
     background: $color-background;
     color: #FFF;
-    padding: .4em 1em 2em;
+    width: 100%;
+
+    &__content {
+        box-sizing: border-box;
+        padding: .4em 1em 2em;
+    }
 
     &__copyright {
         font-size: .8em;

@@ -1,6 +1,9 @@
+@import "variables";
+
 .article-list {
     box-sizing: border-box;
     margin-bottom: 5rem;
+    max-width: $width-total;
 
     @media #{$responsive-small} {
         padding-left: 1em;
@@ -8,6 +11,7 @@
 
     @media #{$responsive-medium-large} {
         padding-left: $text-indent;
+        padding-right: $text-indent;
     }
 
     &__article {

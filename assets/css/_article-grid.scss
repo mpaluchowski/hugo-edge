@@ -1,7 +1,9 @@
+@import "variables";
+
 .article-grid {
-    align-content: flex-start;
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    margin: 0 auto;
+    max-width: $width-total;
     padding: 1em 0;
 
     &__article {
@@ -9,13 +11,11 @@
         padding: 1em;
 
         @media #{$responsive-medium-large} {
-            flex: 0 1 auto;
-            width: 50%;
-        }
+            grid-template-columns: 1fr 1fr;
 
-        &:first-child {
-            flex: 1 0 auto;
-            width: 100%;
+            &:first-child {
+                grid-column-end: span 2;
+            }
         }
 
         &:nth-child(n + 2) {

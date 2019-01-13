@@ -2,8 +2,8 @@
 
 {{ $children := (.Pages | union .Sections).ByDate.Reverse }}
 {{ if $children }}
-<main class="page__main content section">
-    <div class="content__main articles article-list">
+<main class="page__main section">
+    <div class="articles article-list">
         <header class="section__header">
             <h1 class="section__title">{{ .Title }}</h1>
         </header>

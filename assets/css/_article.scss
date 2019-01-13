@@ -1,6 +1,9 @@
+@import "variables";
+
 .article {
-    margin-bottom: 5rem;
-    max-width: calc(#{$width-content-absolute} + #{$text-indent});
+    margin: 0 auto 5rem;
+    max-width: $width-total;
+    position: relative;
 
     &__header {
         margin-bottom: 2.6em;
@@ -13,7 +16,7 @@
             size: cover;
         }
         height: 300px;
-        max-width: $width-content-absolute;
+        max-width: calc(#{$width-total} - #{$text-indent});
         width: 100%;
     }
 

@@ -1,6 +1,12 @@
+@import "variables";
+
 .header {
     background: $color-background;
-    padding: 1em;
+
+    &__content {
+        box-sizing: border-box;
+        padding: 1em;
+    }
 
     &__title {
         display: inline-block;

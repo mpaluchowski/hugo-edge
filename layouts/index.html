@@ -1,29 +1,25 @@
 {{ define "main" }}
 
-<div class="page__main content">
-    <main class="content__main articles article-grid">
-        {{ range first 5 (where .Site.Pages "Kind" "page") }}
-        <article class="articles__article article-grid__article">
-            <header class="articles__header">
-                {{ with .Params.image }}<div class="articles__image" style="background-image: url({{ . }});"></div>{{ end }}
-                <time class="articles__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
-                <h2 class="articles__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            </header>
-            <div class="text">{{ .Summary }}</div>
-        </article>
-        {{ end }}
-    </main>
-</div>
+<main class="page__main articles article-grid">
+    {{ range first 5 (where .Site.Pages "Kind" "page") }}
+    <article class="articles__article article-grid__article">
+        <header class="articles__header">
+            {{ with .Params.image }}<div class="articles__image" style="background-image: url({{ . }});"></div>{{ end }}
+            <time class="articles__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            <h2 class="articles__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        </header>
+        <div class="text">{{ .Summary }}</div>
+    </article>
+    {{ end }}
+</main>
 
-<div class="highlights">
-    <div class="content">
-        <div class="content__main highlights__main">
-        {{ if .Site.Params.Strava }}
-            <div class="highlights__entry">
-                <iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/{{ .Site.Params.Strava.AthleteId }}/latest-rides/{{ .Site.Params.Strava.WidgetId }}'></iframe>
-            </div>
-        {{ end }}
+<div class="highlights full-width">
+    <div class="full-width__content highlights__main">
+    {{ if .Site.Params.Strava }}
+        <div class="highlights__entry">
+            <iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/{{ .Site.Params.Strava.AthleteId }}/latest-rides/{{ .Site.Params.Strava.WidgetId }}'></iframe>
         </div>
+    {{ end }}
     </div>
 </div>
 

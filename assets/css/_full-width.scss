@@ -1,0 +1,13 @@
+@import "variables";
+
+.full-width {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__content {
+        max-width: $width-total;
+        width: 100%;
+    }
+}
