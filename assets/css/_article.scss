@@ -1,0 +1,120 @@
+.article {
+    margin-bottom: 5rem;
+    max-width: calc(#{$width-content-absolute} + #{$text-indent});
+
+    &__header {
+        margin-bottom: 2.6em;
+    }
+
+    &__image {
+        background: {
+            position: 50% 50%;
+            repeat: no-repeat;
+            size: cover;
+        }
+        height: 300px;
+        max-width: $width-content-absolute;
+        width: 100%;
+    }
+
+    &__time {
+        display: block;
+        font: 300 1.2em $font-header;
+        margin-top: 2.8rem;
+    }
+
+    &__title {
+        font: 400 2.6em $font-header;
+        margin-top: 0;
+    }
+
+    &__stats {
+        color: lighten(#000, 50%);
+        font-size: .8em;
+        box-sizing: border-box;
+        padding: 0 1rem;
+
+        @media #{$responsive-medium-large} {
+            left: 0;
+            position: absolute;
+            width: $text-indent;
+        }
+    }
+
+    &__tags {
+        font-size: .8em;
+        margin-top: 2.6em;
+    }
+
+    &__time, &__title, &__text, &__tags {
+        @media #{$responsive-small-medium} {
+            padding: 0 1rem;
+        }
+
+        @media #{$responsive-medium-large} {
+            margin-left: $text-indent;
+        }
+
+        @media #{$responsive-large} {
+            margin-right: $text-indent;
+        }
+    }
+
+    &--section {
+        .article__header {
+            margin-top: 3rem;
+        }
+    }
+
+    figure {
+        @media #{$responsive-small} {
+            margin: 0 -1rem 1rem;
+        }
+
+        @media #{$responsive-medium} {
+            &.right {
+                margin: 0 -1rem 1em 2em;
+            }
+        }
+
+        @media #{$responsive-medium-large} {
+            max-width: 60%;
+
+            &.left {
+                margin: 0 2em 1em (-$text-indent);
+                float: left;
+            }
+
+            &.right {
+                float: right;
+            }
+        }
+
+        @media #{$responsive-large} {
+            &.right {
+                margin: 0 (-$text-indent) 1em 2em;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .youtube {
+        @media #{$responsive-small} {
+            margin: 2em -1em;
+            padding-bottom: calc(56.25% + 2em * .5625);
+        }
+
+        @media #{$responsive-medium} {
+            margin: 2em -1em 2em (-$text-indent);
+            padding-bottom: calc(56.25% + (#{$text-indent} + 1em) * .5625);
+        }
+
+        @media #{$responsive-large} {
+            margin: 2em 0 2em (-$text-indent);
+            padding-bottom: calc(56.25% + #{$text-indent} * .5625);
+        }
+    }
+}

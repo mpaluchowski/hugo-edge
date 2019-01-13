@@ -1,0 +1,25 @@
+.article-grid {
+    align-content: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1em 0;
+
+    &__article {
+        box-sizing: border-box;
+        padding: 1em;
+
+        @media #{$responsive-medium-large} {
+            flex: 0 1 auto;
+            width: 50%;
+        }
+
+        &:first-child {
+            flex: 1 0 auto;
+            width: 100%;
+        }
+
+        &:nth-child(n + 2) {
+            font-size: .9em;
+        }
+    }
+}

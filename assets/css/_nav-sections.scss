@@ -1,0 +1,30 @@
+.nav-sections {
+    margin-left: 1em;
+
+    &__link {
+        color: #FFF;
+        display: inline-block;
+        margin: 1em 2em 0 0;
+        text-decoration: none;
+
+        &--current {
+            color: $color-highlight;
+        }
+
+        &:hover {
+            color: $color-highlight;
+        }
+
+        &:before {
+            background: $color-highlight;
+            border: 1.6px solid $color-highlight;
+            content: "";
+            display: inline-block;
+            height: 1.2em;
+            margin-right: .2em;
+            transform-origin: top right;
+            transform: rotateZ(30deg);
+            vertical-align: middle;
+        }
+    }
+}

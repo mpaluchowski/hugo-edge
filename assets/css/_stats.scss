@@ -1,0 +1,19 @@
+.stats {
+    line-height: $line-height;
+
+    @media #{$responsive-medium-large} {
+        &__entry {
+            display: block;
+        }
+    }
+
+    &__entry {
+        @media #{$responsive-small} {
+            &:not(:last-child) {
+                &:after {
+                    content: ", ";
+                }
+            }
+        }
+    }
+}

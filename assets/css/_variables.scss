@@ -1,0 +1,31 @@
+$medium-breakpoint: 690px;
+$large-breakpoint: 1020px;
+
+// Responsive Media Queries
+$responsive-small: "only screen and (max-width: #{$medium-breakpoint - 1})";
+$responsive-small-medium: "only screen and (max-width: #{$large-breakpoint - 1})";
+$responsive-medium: "only screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint - 1})";
+$responsive-medium-large: "only screen and (min-width: #{$medium-breakpoint})";
+$responsive-large: "only screen and (min-width: #{$large-breakpoint})";
+
+// Common Content Sizing
+$line-height: 1.6;
+$width-total: 1300px;
+$width-content-proportion: 1.61;
+$width-side-proportion: 1;
+$width-content-relative: round($width-content-proportion / ($width-content-proportion + $width-side-proportion) * 100%);
+$width-side-relative: round($width-side-proportion / ($width-content-proportion + $width-side-proportion) * 100%);
+$width-content-absolute: round($width-content-proportion / ($width-content-proportion + $width-side-proportion) * $width-total);
+$text-indent: 10rem;
+
+// Fonts
+$font-default: "Open Sans", Helvetica, Arial, sans-serif;
+$font-header: "Alegreya Sans SC", Helvetica, Arial, sans-serif;
+
+// Colors
+$color-background: #000;
+$color-text: #000;
+$color-text-inactive: lighten($color-text, 50%);
+$color-highlight: #FF0;
+$color-highlight-background: darken($color-highlight, 5%);
+$color-highlight-dark: darken($color-highlight, 10%);

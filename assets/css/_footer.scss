@@ -1,0 +1,10 @@
+.footer {
+    background: $color-background;
+    color: #FFF;
+    padding: .4em 1em 2em;
+
+    &__copyright {
+        font-size: .8em;
+        margin-top: 4em;
+    }
+}

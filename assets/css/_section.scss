@@ -1,0 +1,14 @@
+.section {
+    &__header {
+        margin: 3rem 0 5rem;
+    }
+
+    &__label {
+        font: 300 1.2em $font-header;
+    }
+
+    &__title {
+        font: 400 2.6em $font-header;
+        margin: 0;
+    }
+}

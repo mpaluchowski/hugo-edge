@@ -1,0 +1,20 @@
+.article-list {
+    box-sizing: border-box;
+    margin-bottom: 5rem;
+
+    @media #{$responsive-small} {
+        padding-left: 1em;
+    }
+
+    @media #{$responsive-medium-large} {
+        padding-left: $text-indent;
+    }
+
+    &__article {
+        padding-right: 1em;
+
+        & + & {
+            margin-top: 2em;
+        }
+    }
+}

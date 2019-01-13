@@ -1,0 +1,20 @@
+.content {
+    display: flex;
+    max-width: $width-total;
+    width: 100%;
+
+    @media #{$responsive-small-medium} {
+        flex-direction: column;
+    }
+
+    &__main {
+        @media #{$responsive-medium-large} {
+            flex: 0 $width-content-proportion auto;
+            width: 100%;
+        }
+
+        @media #{$responsive-large} {
+            max-width: $width-content-absolute;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.tags {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+
+    &__tag {
+        display: inline-block;
+        margin-left: .2em;
+    }
+
+    &__link {
+        background: $color-background;
+        color: #FFF;
+        display: block;
+        padding: .4em .6em;
+        text-decoration: none;
+
+        &:hover {
+            background: $color-highlight;
+            color: #000;
+        }
+    }
+}

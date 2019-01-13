@@ -1,0 +1,25 @@
+.highlights {
+    background: darken($color-highlight, 5%);
+
+    @media #{$responsive-medium-large} {
+        &__main {
+            display: flex;
+            flex-flow: row wrap;
+
+            .highlights__entry {
+                flex: 1 1 auto;
+                width: 50%;
+            }
+        }
+    }
+
+    &__entry {
+        box-sizing: border-box;
+        padding: 1.2rem 1rem;
+    }
+
+    &__header {
+        font: 400 1.6em $font-header;
+        margin: 0 0 1rem;
+    }
+}

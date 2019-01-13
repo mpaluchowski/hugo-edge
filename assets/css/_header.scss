@@ -1,0 +1,25 @@
+.header {
+    background: $color-background;
+    padding: 1em;
+
+    &__title {
+        display: inline-block;
+        font: 300 2.5rem $font-header;
+        margin: 0 .8em 0 0;
+
+        a {
+            color: $color-highlight;
+            text-decoration: none;
+        }
+    }
+
+    &__subtitle {
+        color: #FFF;
+        display: inline-block;
+        font-size: 1.4rem;
+    }
+
+    &__navigation {
+        margin-top: .5em;
+    }
+}
