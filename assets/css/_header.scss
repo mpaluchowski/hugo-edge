@@ -1,9 +1,10 @@
 @import "variables";
 
 .header {
-    background: $color-background;
+    background: linear-gradient(90deg, darken($color-highlight, 5%) 50%, $color-background 50%);;
 
     &__content {
+        background: $color-background;
         box-sizing: border-box;
         padding: 1em;
     }
