@@ -11,6 +11,9 @@
 
     @media #{$responsive-medium-large} {
         padding-left: $text-indent;
+    }
+
+    @media #{$responsive-large} {
         padding-right: $text-indent;
     }
 
