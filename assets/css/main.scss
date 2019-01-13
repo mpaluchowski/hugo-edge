@@ -405,11 +405,7 @@ html {
         margin-top: 2.6em;
     }
 
-    &__comments {
-        margin-top: 3em;
-    }
-
-    &__time, &__title, &__text, &__tags, &__comments {
+    &__time, &__title, &__text, &__tags {
         @media #{$responsive-small-medium} {
             padding: 0 1rem;
         }
