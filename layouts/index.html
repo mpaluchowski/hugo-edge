@@ -13,15 +13,6 @@
         </article>
         {{ end }}
     </main>
-    <aside class="content__side">
-        {{ with .Site.Params.Intro }}
-        <div class="page-intro text">
-            {{ with .gravataremail }}<img class="page-intro__photo" src="https://www.gravatar.com/avatar/{{ trim . " " | lower | md5 }}?s=160">{{ end }}
-            <div class="page-intro__header">Hi, I'm {{ .name | plainify }}!</div>
-            <p>{{ .text | safeHTML }}</p>
-        </div>
-        {{ end }}
-    </aside>
 </div>
 
 <div class="highlights">
@@ -38,7 +29,7 @@
             {{ end }}
         </div>
         {{ if .Site.Params.Strava }}
-        <div class="content__side">
+        <div>
             <div class="highlights__entry">
                 <iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/{{ .Site.Params.Strava.AthleteId }}/latest-rides/{{ .Site.Params.Strava.WidgetId }}'></iframe>
             </div>

@@ -139,13 +139,6 @@ html {
             max-width: $width-content-absolute;
         }
     }
-
-    &__side {
-        @media #{$responsive-large} {
-            flex: $width-side-proportion $width-side-proportion auto;
-            width: $width-side-relative;
-        }
-    }
 }
 
 /* Article Listings */
