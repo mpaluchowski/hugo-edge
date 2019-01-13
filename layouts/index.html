@@ -18,15 +18,6 @@
 <div class="highlights">
     <div class="content">
         <div class="content__main highlights__main">
-            {{ with .Site.Params.TrainingPlans }}
-            <nav class="highlights__entry">
-                <h3 class="highlights__header">Current Training</h3>
-                <ul class="resources">
-                    {{ with .Annual }}<li class="resources__entry"><a href="{{ . }}" class="resources__link">Annual Plan</a></li>{{ end }}
-                    {{ with .Weekly }}<li class="resources__entry"><a href="{{ . }}" class="resources__link">Weekly Plan</a></li>{{ end }}
-                </ul>
-            </nav>
-            {{ end }}
         </div>
         {{ if .Site.Params.Strava }}
         <div>

@@ -274,29 +274,6 @@ html {
     }
 }
 
-.resources {
-    list-style: none;
-    padding: 0;
-
-    &__entry {
-        & + & {
-            margin-top: .6em;
-        }
-    }
-
-    &__link {
-        border-bottom: 1px solid $color-text;
-        color: $color-text;
-        display: inline-block;
-        margin: .4em 0;
-        text-decoration: none;
-
-        &:hover {
-            color: $color-highlight;
-        }
-    }
-}
-
 /* Sections */
 
 .section {
