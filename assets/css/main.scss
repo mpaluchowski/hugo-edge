@@ -281,40 +281,6 @@ html {
     }
 }
 
-.races {
-    list-style: none;
-    padding: 0;
-
-    &__entry {
-        & + & {
-            margin-top: .6em;
-        }
-
-        a {
-            color: $color-text;
-            text-decoration: none;
-
-            .races__title {
-                border-bottom: 1px solid $color-text;
-            }
-        }
-    }
-
-    &__title {
-        display: inline-block;
-    }
-
-    &__date {
-        background: $color-background;
-        color: #FFF;
-        display: inline-block;
-        margin-right: .4em;
-        padding: .4em;
-        text-align: right;
-        width: 3.4em;
-    }
-}
-
 .resources {
     list-style: none;
     padding: 0;
