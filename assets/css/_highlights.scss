@@ -2,6 +2,8 @@
 
 .highlights {
     background: darken($color-highlight, 5%);
+    max-width: $width-total;
+    width: 100%;
 
     @media #{$responsive-medium-large} {
         &__main {
