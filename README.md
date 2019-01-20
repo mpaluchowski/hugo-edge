@@ -1,6 +1,6 @@
 # Edge Hugo Theme
 
-Edge is a Hugo theme for personal cycling websites. Originally built for my own site at https://cycling.paluchowski.com
+Edge is a Hugo theme for personal cycling websites. Originally built for my own site at https://cycling.paluchowski.com. For the time being it's very underdeveloped, because the blog that runs it has very litle content. With time, as the blog grows so will this theme, with more features. 
 
 ## Installation
 
