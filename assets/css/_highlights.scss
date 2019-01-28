@@ -1,7 +1,7 @@
 @import "variables";
 
 .highlights {
-    background: darken($color-highlight, 5%);
+    background: $color-highlight-background;
     max-width: $width-total;
     width: 100%;
 
