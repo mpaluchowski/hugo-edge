@@ -16,7 +16,7 @@
             size: cover;
         }
         height: 300px;
-        max-width: calc(#{$width-total} - #{$text-indent});
+        max-width: $width-total;
         width: 100%;
     }
 
@@ -57,10 +57,6 @@
         @media #{$responsive-medium-large} {
             margin-left: $text-indent;
         }
-
-        @media #{$responsive-large} {
-            margin-right: $text-indent;
-        }
     }
 
     &--section {
@@ -95,7 +91,7 @@
 
         @media #{$responsive-large} {
             &.right {
-                margin: 0 (-$text-indent) 1em 2em;
+                margin: 0 0 1em 2em;
             }
         }
     }

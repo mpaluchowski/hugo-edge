@@ -13,10 +13,6 @@
         padding-left: $text-indent;
     }
 
-    @media #{$responsive-large} {
-        padding-right: $text-indent;
-    }
-
     &__article {
         padding-right: 1em;
 

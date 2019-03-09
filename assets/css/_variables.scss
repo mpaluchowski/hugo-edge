@@ -1,5 +1,5 @@
 $medium-breakpoint: 690px;
-$large-breakpoint: 1020px;
+$large-breakpoint: 800px;
 
 // Responsive Media Queries
 $responsive-small: "only screen and (max-width: #{$medium-breakpoint - 1})";
@@ -10,7 +10,7 @@ $responsive-large: "only screen and (min-width: #{$large-breakpoint})";
 
 // Common Content Sizing
 $line-height: 1.6;
-$width-total: 960px;
+$width-total: 800px;
 $text-indent: 10rem;
 
 // Fonts
