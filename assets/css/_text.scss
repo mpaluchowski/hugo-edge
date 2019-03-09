@@ -21,7 +21,10 @@
         padding: .4em;
     }
 
-    td + td, th + th, td + th, th + td {
+    td + td,
+    th + th,
+    td + th,
+    th + td {
         border-left: 1px solid lighten($color-text, 70%);
     }
 
