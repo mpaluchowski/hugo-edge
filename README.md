@@ -11,11 +11,11 @@ $ cd /your/hugo/site
 $ git clone https://github.com/mpaluchowski/hugo-edge themes/edge
 ```
 
-Build the [SASS](http://sass-lang.com/) files from `/assets/css` into `/static/css`:
+Build the [SASS](http://sass-lang.com/) files in `/assets/css`:
 
 ```shell
 $ cd themes/edge
-$ sass -E UTF-8 --sourcemap=none --style compressed --update assets:assets
+$ sass --no-source-map --style=compressed --update assets:assets
 ```
 
 Then tell Hugo to render your site with the theme:
