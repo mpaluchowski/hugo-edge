@@ -5,7 +5,7 @@ description = "Theme for my personal cycling-themed blog."
 homepage = "https://cycling.paluchowski.com/"
 tags = ["blog", "responsive"]
 features = []
-min_version = "0.43"
+min_version = "0.55"
 
 [author]
     name = "Michał Paluchowski"
