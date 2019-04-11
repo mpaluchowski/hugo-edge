@@ -7,19 +7,13 @@
 
     @media #{$responsive-medium-large} {
         &__main {
-            display: flex;
-            flex-flow: row wrap;
-
-            .highlights__entry {
-                flex: 0 1 auto;
-                width: 50%;
-            }
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
     }
 
     &__entry {
-        box-sizing: border-box;
-        padding: 1.2rem 1rem;
+        padding: 1em;
     }
 
     &__header {
