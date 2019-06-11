@@ -56,6 +56,10 @@
         }
     }
 
+    figure {
+        line-height: 0;
+    }
+
     a {
         border-bottom: 1px solid $color-highlight-dark;
         color: inherit;
