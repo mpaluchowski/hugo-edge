@@ -91,6 +91,10 @@
                 float: right;
                 max-width: 60%;
             }
+
+            &.full {
+                margin-left: (-$text-indent);
+            }
         }
 
         @media #{$responsive-large} {
