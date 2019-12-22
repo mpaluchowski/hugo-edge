@@ -11,7 +11,7 @@
         {{ range $children }}
         <article class="articles__article article-list__article">
             <header class="articles__header">
-                {{ if .Params.image }}<div class="articles__image" style="background-image: url({{ cond (eq (substr .Params.image 0 1) "/") .Params.image (path.Join .File.Dir .Params.image) }});"></div>{{ end }}
+                {{ if .Params.image }}<div class="articles__image" style="background-image: url({{ cond (eq (substr .Params.image 0 1) "/") .Params.image (path.Join .File.Dir .Params.image | relURL) }});"></div>{{ end }}
                 <time class="articles__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
                 <h2 class="articles__title">{{ if or .Pages .Content }}<a href="{{ .Permalink }}">{{ end }}{{ .Title }}{{ if or .Pages .Content }}</a>{{ end }}</h2>
             </header>
