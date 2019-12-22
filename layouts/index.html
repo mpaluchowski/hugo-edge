@@ -4,7 +4,7 @@
     {{ range first 5 (where .Site.Pages "Kind" "page") }}
     <article class="articles__article article-grid__article">
         <header class="articles__header">
-            {{ with .Params.image }}<div class="articles__image" style="background-image: url({{ . }});"></div>{{ end }}
+            {{ if .Params.image }}<div class="articles__image" style="background-image: url({{ cond (eq (substr .Params.image 0 1) "/") .Params.image (path.Join .File.Dir .Params.image) }});"></div>{{ end }}
             <time class="articles__time" datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
             <h2 class="articles__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         </header>
