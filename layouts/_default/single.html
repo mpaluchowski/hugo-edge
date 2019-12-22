@@ -11,10 +11,10 @@
 
         </header>
 
-        <div class="article__stats stats">
+        <aside class="article__stats stats">
             <span class="stats__entry">{{ .WordCount }} words</span>
             <span class="stats__entry">{{ .ReadingTime }} minute{{if gt .ReadingTime 1}}s{{end}} to read</span>
-        </div>
+        </aside>
 
         <section class="article__text text">
             {{ .Content }}
