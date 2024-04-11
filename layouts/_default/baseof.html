@@ -20,7 +20,7 @@
         {{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
 
         <link rel="canonical" href="{{ .Permalink }}">
-        {{ if ne .Kind "404" }}{{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}">{{ end }}{{ end }}
+        {{ if ne .Kind "404" }}{{ with .OutputFormats.Get "RSS" }}<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ page.Title }}">{{ end }}{{ end }}
 
         <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC:300,400|Open+Sans:400,400i,600,600i,700,700i&amp;subset=latin-ext" rel="stylesheet">
         {{- $style := resources.Get "css/main.css" | resources.Fingerprint -}}
