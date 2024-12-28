@@ -1,16 +1,16 @@
-@import "variables";
+@use "variables";
 
 .article-grid {
     display: grid;
     margin: 0 auto;
-    max-width: $width-total;
+    max-width: variables.$width-total;
     padding: 1em 0;
 
     &__article {
         box-sizing: border-box;
         padding: 1em;
 
-        @media #{$responsive-medium-large} {
+        @media #{variables.$responsive-medium-large} {
             grid-template-columns: 1fr 1fr;
 
             &:first-child {

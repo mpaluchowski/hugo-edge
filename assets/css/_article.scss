@@ -1,8 +1,9 @@
-@import "variables";
+@use "sass:color";
+@use "variables";
 
 .article {
     margin: 0 auto 5rem;
-    max-width: $width-total;
+    max-width: variables.$width-total;
     position: relative;
 
     &__header {
@@ -16,31 +17,31 @@
             size: cover;
         }
         height: 300px;
-        max-width: $width-total;
+        max-width: variables.$width-total;
         width: 100%;
     }
 
     &__time {
         display: block;
-        font: 300 1.2em $font-header;
+        font: 300 1.2em variables.$font-header;
         margin-top: 2.8rem;
     }
 
     &__title {
-        font: 400 2.6em $font-header;
+        font: 400 2.6em variables.$font-header;
         margin-top: 0;
     }
 
     &__stats {
-        color: lighten(#000, 50%);
+        color: color.adjust(#000, $lightness: 50%);
         font-size: .8em;
         box-sizing: border-box;
         padding: 0 1rem;
 
-        @media #{$responsive-medium-large} {
+        @media #{variables.$responsive-medium-large} {
             left: 0;
             position: absolute;
-            width: $text-indent;
+            width: variables.$text-indent;
         }
     }
 
@@ -50,12 +51,12 @@
     }
 
     &__time, &__title, &__text, &__tags {
-        @media #{$responsive-small-medium} {
+        @media #{variables.$responsive-small-medium} {
             padding: 0 1rem;
         }
 
-        @media #{$responsive-medium-large} {
-            margin-left: $text-indent;
+        @media #{variables.$responsive-medium-large} {
+            margin-left: variables.$text-indent;
         }
     }
 
@@ -68,21 +69,21 @@
     figure {
         text-align: center;
 
-        @media #{$responsive-small} {
+        @media #{variables.$responsive-small} {
             margin: 0 -1rem 1rem;
         }
 
-        @media #{$responsive-medium} {
+        @media #{variables.$responsive-medium} {
             &.right {
                 margin: 0 -1rem 1em 2em;
             }
         }
 
-        @media #{$responsive-medium-large} {
+        @media #{variables.$responsive-medium-large} {
             margin: 2em 0;
 
             &.left {
-                margin: 0 2em 1em (-$text-indent);
+                margin: 0 2em 1em (-(variables.$text-indent));
                 max-width: 60%;
                 float: left;
             }
@@ -93,11 +94,11 @@
             }
 
             &.full {
-                margin-left: (-$text-indent);
+                margin-left: (-(variables.$text-indent));
             }
         }
 
-        @media #{$responsive-large} {
+        @media #{variables.$responsive-large} {
             &.right {
                 margin: 0 0 1em 2em;
             }
@@ -108,7 +109,7 @@
         margin-top: 1em;
 
         h4 {
-            color: $color-text-inactive;
+            color: variables.$color-text-inactive;
             font-size: .9em;
             margin: 0;
         }
@@ -119,19 +120,19 @@
     }
 
     .youtube {
-        @media #{$responsive-small} {
+        @media #{variables.$responsive-small} {
             margin: 2em -1em;
             padding-bottom: calc(56.25% + 2em * .5625);
         }
 
-        @media #{$responsive-medium} {
-            margin: 2em -1em 2em (-$text-indent);
-            padding-bottom: calc(56.25% + (#{$text-indent} + 1em) * .5625);
+        @media #{variables.$responsive-medium} {
+            margin: 2em -1em 2em (-(variables.$text-indent));
+            padding-bottom: calc(56.25% + (#{variables.$text-indent} + 1em) * .5625);
         }
 
-        @media #{$responsive-large} {
-            margin: 2em 0 2em (-$text-indent);
-            padding-bottom: calc(56.25% + #{$text-indent} * .5625);
+        @media #{variables.$responsive-large} {
+            margin: 2em 0 2em (-(variables.$text-indent));
+            padding-bottom: calc(56.25% + #{variables.$text-indent} * .5625);
         }
     }
 }

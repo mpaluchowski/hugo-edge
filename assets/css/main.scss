@@ -1,48 +1,49 @@
-@import "normalize";
-@import "variables";
+@use "sass:meta";
+@use "normalize";
+@use "variables";
 
 html {
     font: {
-        family: $font-default;
+        family: variables.$font-default;
     }
 }
 
 /* Header, Foot & Navigation */
 
-@import "header";
-@import "footer";
-@import "nav-sections";
+@include meta.load-css("header");
+@include meta.load-css("footer");
+@include meta.load-css("nav-sections");
 
 /* General Page Layout */
 
-@import "page";
-@import "full-width";
+@include meta.load-css("page");
+@include meta.load-css("full-width");
 
 /* Article Listings */
 
-@import "articles";
-@import "article-grid";
-@import "article-list";
+@include meta.load-css("articles");
+@include meta.load-css("article-grid");
+@include meta.load-css("article-list");
 
 /* Home Page */
 
-@import "highlights";
+@include meta.load-css("highlights");
 
 /* Sections */
 
-@import "section";
+@include meta.load-css("section");
 
 /* Article Page */
 
-@import "article";
-@import "stats";
-@import "tags";
+@include meta.load-css("article");
+@include meta.load-css("stats");
+@include meta.load-css("tags");
 
 /* General Text Styling */
 
-@import "text";
+@include meta.load-css("text");
 
 /* Content Elements */
 
-@import "embed";
-@import "youtube";
+@include meta.load-css("embed");
+@include meta.load-css("youtube");

@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .nav-sections {
     margin-left: 1em;
@@ -10,16 +10,16 @@
         text-decoration: none;
 
         &--current {
-            color: $color-highlight;
+            color: variables.$color-highlight;
         }
 
         &:hover {
-            color: $color-highlight;
+            color: variables.$color-highlight;
         }
 
         &:before {
-            background: $color-highlight;
-            border: 1.6px solid $color-highlight;
+            background: variables.$color-highlight;
+            border: 1.6px solid variables.$color-highlight;
             content: "";
             display: inline-block;
             height: 1.2em;

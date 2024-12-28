@@ -1,7 +1,8 @@
-@import "variables";
+@use "sass:color";
+@use "variables";
 
 .text {
-    line-height: $line-height;
+    line-height: variables.$line-height;
 
     h2, h3 {
         font-weight: 600;
@@ -25,21 +26,21 @@
     th + th,
     td + th,
     th + td {
-        border-left: 1px solid lighten($color-text, 70%);
+        border-left: 1px solid color.adjust(variables.$color-text, $lightness: 70%);
     }
 
     tr + tr {
         td, th {
-            border-top: 1px solid lighten($color-text, 70%);
+            border-top: 1px solid color.adjust(variables.$color-text, $lightness: 70%);
         }
     }
 
     blockquote {
-        color: lighten($color-text, 30%);
+        color: color.adjust(variables.$color-text, $lightness: 30%);
         position: relative;
 
         &:before {
-            border-left: 5px solid $color-highlight-dark;
+            border-left: 5px solid variables.$color-highlight-dark;
             content: "";
             height: 100%;
             left: calc(-1em - 5px);
@@ -61,7 +62,7 @@
     }
 
     a {
-        border-bottom: 1px solid $color-highlight-dark;
+        border-bottom: 1px solid variables.$color-highlight-dark;
         color: inherit;
         text-decoration: none;
         transition:
@@ -69,8 +70,8 @@
             border-bottom-color .3s;
 
         &:hover {
-            background: $color-highlight;
-            border-color: $color-text;
+            background: variables.$color-highlight;
+            border-color: variables.$color-text;
         }
     }
 
@@ -81,7 +82,7 @@
 
     &--dark {
         a {
-            border-bottom-color: $color-highlight;
+            border-bottom-color: variables.$color-highlight;
 
             &:hover {
                 color: #000;

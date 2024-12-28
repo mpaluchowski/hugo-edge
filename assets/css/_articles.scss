@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .articles {
     &__image {
@@ -12,20 +12,20 @@
 
     &__time {
         display: block;
-        font: 300 1.2em $font-header
+        font: 300 1.2em variables.$font-header
     }
 
     &__title {
-        color: $color-text-inactive;
-        font: 400 2em $font-header;
+        color: variables.$color-text-inactive;
+        font: 400 2em variables.$font-header;
         margin: 0;
 
         a {
-            color: $color-text;
+            color: variables.$color-text;
             text-decoration: none;
 
             &:hover {
-                border-bottom: 2px solid $color-highlight-dark;
+                border-bottom: 2px solid variables.$color-highlight-dark;
             }
         }
     }

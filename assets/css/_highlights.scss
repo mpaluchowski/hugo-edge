@@ -1,11 +1,11 @@
-@import "variables";
+@use "variables";
 
 .highlights {
-    background: $color-highlight-background;
-    max-width: $width-total;
+    background: variables.$color-highlight-background;
+    max-width: variables.$width-total;
     width: 100%;
 
-    @media #{$responsive-medium-large} {
+    @media #{variables.$responsive-medium-large} {
         &__main {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -17,7 +17,7 @@
     }
 
     &__header {
-        font: 400 1.6em $font-header;
+        font: 400 1.6em variables.$font-header;
         margin: 0 0 1rem;
     }
 }

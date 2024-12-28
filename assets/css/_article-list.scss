@@ -1,16 +1,16 @@
-@import "variables";
+@use "variables";
 
 .article-list {
     box-sizing: border-box;
     margin-bottom: 5rem;
-    max-width: $width-total;
+    max-width: variables.$width-total;
 
-    @media #{$responsive-small} {
+    @media #{variables.$responsive-small} {
         padding-left: 1em;
     }
 
-    @media #{$responsive-medium-large} {
-        padding-left: $text-indent;
+    @media #{variables.$responsive-medium-large} {
+        padding-left: variables.$text-indent;
     }
 
     &__article {

@@ -1,3 +1,4 @@
+@use "sass:color";
 $medium-breakpoint: 690px;
 $large-breakpoint: 800px;
 
@@ -20,7 +21,7 @@ $font-header: "Alegreya Sans SC", Helvetica, Arial, sans-serif;
 // Colors
 $color-background: #000;
 $color-text: #000;
-$color-text-inactive: lighten($color-text, 50%);
+$color-text-inactive: color.adjust($color-text, $lightness: 50%);
 $color-highlight: #FF0;
 $color-highlight-background: #ffe500;
-$color-highlight-dark: darken($color-highlight, 10%);
+$color-highlight-dark: color.adjust($color-highlight, $lightness: -10%);

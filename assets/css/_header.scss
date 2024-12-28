@@ -1,21 +1,21 @@
-@import "variables";
+@use "variables";
 
 .header {
-    background: linear-gradient(90deg, $color-highlight-background 50%, $color-background 50%);;
+    background: linear-gradient(90deg, variables.$color-highlight-background 50%, variables.$color-background 50%);;
 
     &__content {
-        background: $color-background;
+        background: variables.$color-background;
         box-sizing: border-box;
         padding: 1em;
     }
 
     &__title {
         display: inline-block;
-        font: 300 2.5rem $font-header;
+        font: 300 2.5rem variables.$font-header;
         margin: 0 .8em 0 0;
 
         a {
-            color: $color-highlight;
+            color: variables.$color-highlight;
             text-decoration: none;
         }
     }

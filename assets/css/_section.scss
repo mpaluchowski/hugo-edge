@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .section {
     &__header {
@@ -6,11 +6,11 @@
     }
 
     &__label {
-        font: 300 1.2em $font-header;
+        font: 300 1.2em variables.$font-header;
     }
 
     &__title {
-        font: 400 2.6em $font-header;
+        font: 400 2.6em variables.$font-header;
         margin: 0;
     }
 }

@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .full-width {
     box-sizing: border-box;
@@ -7,7 +7,7 @@
     justify-content: center;
 
     &__content {
-        max-width: $width-total;
+        max-width: variables.$width-total;
         width: 100%;
     }
 }

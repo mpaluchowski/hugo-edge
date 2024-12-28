@@ -1,7 +1,7 @@
-@import "variables";
+@use "variables";
 
 .footer {
-    background: $color-background;
+    background: variables.$color-background;
     color: #FFF;
     width: 100%;
 

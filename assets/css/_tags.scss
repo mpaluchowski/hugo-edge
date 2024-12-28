@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .tags {
     display: inline-block;
@@ -13,7 +13,7 @@
     }
 
     &__link {
-        background: $color-background;
+        background: variables.$color-background;
         color: #FFF;
         display: block;
         padding: .4em .6em;
@@ -23,7 +23,7 @@
             color .3s;
 
         &:hover {
-            background: $color-highlight;
+            background: variables.$color-highlight;
             color: #000;
         }
     }
