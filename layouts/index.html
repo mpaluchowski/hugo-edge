@@ -17,7 +17,7 @@
     <div class="highlights__main">
         {{ if .Site.Params.Strava -}}
         <div class="highlights__entry">
-            <iframe loading="lazy" height="454" width="100%" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/athletes/{{ .Site.Params.Strava.AthleteId }}/latest-rides/{{ .Site.Params.Strava.WidgetId }}"></iframe>
+            <iframe style="display: block" loading="lazy" height="454" width="100%" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/athletes/{{ .Site.Params.Strava.AthleteId }}/latest-rides/{{ .Site.Params.Strava.WidgetId }}"></iframe>
         </div>
         {{- end }}
     </div>
